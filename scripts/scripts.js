@@ -20,6 +20,7 @@ function setActiveBtn() {
         for (let btn of btns) {
             if (btn.id === "index.html") {
                 btn.className = "active-item"
+                break
             }
         }
     }

@@ -1,10 +1,10 @@
 function setActiveBtn() {
-    let url = window.location.href
     const header = document.getElementById("nav");
     let activeBtn = header.getElementsByClassName("active-item")[0];
     if (activeBtn) {
         activeBtn.className = "nav-item";
     }
+    let url = window.location.href
     const btns = header.getElementsByClassName("nav-item");
     for (let btn of btns) {
         let className;
@@ -17,12 +17,8 @@ function setActiveBtn() {
         btn.className = className
     }
     if (! (url.includes("html"))) {
-        for (let btn of btns) {
-            if (btn.id === "index.html") {
-                btn.className = "active-item"
-                break
-            }
-        }
+        let btn = document.getElementById("index.html");
+        btn.className = "active-item"
     }
 }
 

@@ -8,7 +8,7 @@ function setActiveBtn() {
     const btns = header.getElementsByClassName("nav-item");
     for (let btn of btns) {
         let className;
-        if (url.includes(btn.id)) {
+        if (url.includes(btn.id) || ! (url.includes("html"))) {
             className = "active-item";
         }
         else {

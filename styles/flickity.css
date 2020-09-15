@@ -138,7 +138,6 @@ https://flickity.metafizzy.co
 
 .gallery-cell {
   width: 100%;
-  background: var(--dark);
   counter-increment: gallery-cell;
   display: block;
   margin-left: 32px;
@@ -146,6 +145,7 @@ https://flickity.metafizzy.co
 }
 
 .main-gallery {
+  background: transparent;
   width: calc(100% - 96px);
   margin-left: 48px;
   margin-right: 48px;

@@ -46,6 +46,23 @@ p {
     font-size: 16px;
 }
 
+ion-icon {
+    vertical-align: middle;
+}
+
+.content {
+    padding-left: 95px;
+    width: calc(100% - 95px);
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: expand .8s ease forwards;
+    transition: all .8s ease;
+}
+
 .navbar {
     height: 100%;
     background: var(--dark_gray);
@@ -57,6 +74,26 @@ p {
     flex-direction: column;
     justify-content: space-between;
     z-index: 3;
+    transform: translateY(100%);
+    animation: slideUp .8s ease-in-out forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes expand {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(32px);
+    }
 }
 
 .nav-placeholder {
@@ -97,7 +134,7 @@ p {
     font-weight: lighter;
     transition: 0.3s opacity;
     color: var(--accent);
-    margin-top: -65px;
+    margin-top: -48px;
     text-decoration: none;
     display: block;
 }
@@ -115,6 +152,7 @@ p {
 .active-item a ion-icon {
     color: var(--mid);
     transition: 0.3s ease-out;
+    zoom: 0.7;
 }
 
 .active-item a ion-icon p {
@@ -150,24 +188,14 @@ p {
     color: var(--accent)
 }
 
-.content {
-    padding-left: 95px;
-    width: calc(100% - 95px);
-    position: absolute;
-    top: 25%;
-    bottom: 25%;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
 .header {
     display: inline-flex;
     width: 100%;
 }
 
 .header ion-icon {
-    padding-right: 16px;
+    padding: 0 8px;
+    height: 1.3em;
 }
 
 .header div {
@@ -218,6 +246,18 @@ p {
     padding: 0;
 }
 
+.about .text-zone p {
+    vertical-align: middle;
+    padding: 0;
+}
+
+.about .text-zone p ion-icon {
+    zoom: 0.7;
+    text-align: center;
+    margin-top: 0;
+    vertical-align: middle;
+}
+
 .skills {
     margin-left: var(--margin_left);
     width: 45%;
@@ -236,10 +276,20 @@ p {
 .skills .text-zone li {
     font-size: 16px;
     list-style-type: none;
+    margin-bottom: 12px;
+}
+
+.skills .text-zone li ion-icon {
+    zoom: 0.7
 }
 
 .skills p {
     margin-left: var(--margin_left);
+}
+
+.skills h2 {
+    margin-top: 16px;
+    padding-top: 16px;
 }
 
 .skills .text-zone p {
@@ -347,6 +397,7 @@ details[open] summary:after {
     cursor: text;
     z-index: 1;
     margin-top: 8px;
+    font-family: monospace;
 }
 
 #contact-name {
@@ -371,4 +422,5 @@ details[open] summary:after {
     min-height: 200px;
     overflow: auto;
     margin-top: 8px;
+    font-family: monospace;
 }

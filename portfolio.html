@@ -8,10 +8,11 @@
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css" rel="stylesheet"
           type="text/css"/>
+    <link rel="stylesheet" href="styles/flickity.css" media="screen">
 
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script>
-        $(function(){
+        $(function () {
             $("#header").load("header.html");
             $("#rain").load("rain.html");
         });
@@ -23,135 +24,114 @@
 
 <div class="content">
     <div class="projects">
-            <div class="header">
-                <ion-icon size="large" name="code-slash"></ion-icon>
-                <h1 class="group-title">Portfolio</h1>
-            </div>
-            <p>A small subset of projects I'd like to share with you.</p>
-            <section class="carousel" aria-label="Gallery">
-                <ol class="carousel__viewport">
-                    <li id="carousel__slide1"
-                        
-                        class="carousel__slide">
-                        <div class="carousel__snapper">
-                            <a href="#carousel__slide4"
-                               class="carousel__prev">Go to last slide</a>
-                            <a href="#carousel__slide2"
-                               class="carousel__next">Go to next slide</a>
-
-                            <div class="carousel-slide">
-                                <div class="carousel-slide carousel-content">
-                                    <h2>Universe Simulator</h2>
-                                    <p>A desktop-based application giving the user the tools to better visualise our
-                                        Solar System.</p>
-                                    <p>The user can also create their own 3D simulations to better understand
-                                        orbital mechanics and how they affect celestial bodies. </p>
-                                    <p>Each planet the user chooses to
-                                        add can have its: radius, mass, texture, atmosphere, day length, tidal locking
-                                        and orbital eccentricity adjusted as well as the option to add a moon to them;
-                                        the user can also then set the position of each planet (relative to the star)
-                                        giving them free reign on how they set up their simulation.</p>
-                                    <p>Custom backgrounds and textures can be uploaded to personalise the user's
-                                        simulation even more.</p>
-                                    <a target="_blank" href="https://github.com/Ernzst/Universe-Simulator">View on GitHub</a>
-                                </div>
-
-                                <div class="carousel-slide image">
-                                    <img border="2px solid white" src="media/images/universe_simulator.png"
-                                         alt="Screenshot of the main menu."></div>
-                            </div>
-                        </div>
-
-                    </li>
-                    <li id="carousel__slide2"
-                        
-                        class="carousel__slide">
-                        <div class="carousel__snapper">
-                            <a href="#carousel__slide1"
-                               class="carousel__prev">Go to previous slide</a>
-                            <a href="#carousel__slide3"
-                               class="carousel__next">Go to next slide</a>
-                            <div class="carousel-slide">
-                                <div class="carousel-slide carousel-content">
-                                    <h2>SpeedTyp_r</h2>
-                                    <p>A desktop-based typing game which aims to improve both the vocabulary and typing
-                                        speed of the user.</p>
-                                    <p>The aim of the game is simple: type the word you see on the screen as quickly as
-                                        possible. The user is shown 12 words and is rewarded with in-game currency based
-                                        on their time taken. This currency is used to unlock new word sets in the
-                                        game.</p>
-                                    <p>In singleplayer, earn coins and set the best times you can to earn a top spot on
-                                        the leaderboards, yielding bonus rewards.</p>
-                                    <p>The multiplayer puts you up against another player in a head-to-head with the
-                                        winner reaping all the rewards - the loser gets nothing. There are no skips so
-                                        type accurately.</p>
-                                    <a target="_blank" href="https://github.com/Ernzst/SpeedTyp_r_III">View on GitHub</a>
-                                </div>
-                                <img class="carousel-slide image" src="media/images/speedtyp_r.png"
-                                     alt="Screenshots of the various singleplayer menus.">
-                            </div>
-                        </div>
-                    </li>
-                    <li id="carousel__slide3"
-                        
-                        class="carousel__slide">
-                        <div class="carousel__snapper">
-                            <a href="#carousel__slide2"
-                               class="carousel__prev">Go to previous slide</a>
-                            <a href="#carousel__slide4"
-                               class="carousel__next">Go to next slide</a>
-
-                            <div class="carousel-slide">
-                                <div class="carousel-slide carousel-content">
-                                    <h2>Tetris AI</h2>
-                                    <p>A python program which is able to play a perfect game of Tetris, playing forever
-                                        until reaching the maximum allowed score.</p>
-                                    <p>For each Tetromino the current game context is analysed and then all possible
-                                        moves for a Tetromino on separate game clones are tried. Each move is then
-                                        scored based off pre-defined criteria. The highest scoring move is then applied
-                                        to the real game.</p>
-                                    <p>To improve the success rate of the AI, it also looks ahead to the next block
-                                        (shown in the top right) and plays with it in another game clone. The
-                                        highest-scoring move for both the current and lookahead block are then
-                                        applied.</p>
-                                    <p>A more detailed explanation of the AI is available on the GitHub page</p>
-                                    <a target="_blank" href="https://github.com/Ernzst/Tetris-AI">View on GitHub</a>
-                                </div>
-                                <img class="carousel-slide image" src="media/images/tetris.png"
-                                     alt="Screenshots of the AI">
-                            </div>
-                        </div>
-                    </li>
-                    <li id="carousel__slide4"
-                        
-                        class="carousel__slide">
-                        <div class="carousel__snapper">
-                            <a href="#carousel__slide3"
-                               class="carousel__prev">Go to previous slide</a>
-                            <a href="#carousel__slide1"
-                               class="carousel__next">Go to first slide</a>
-
-                            <div class="carousel-slide">
-                                <div class="carousel-slide carousel-content">
-                                    <h2>2048 AI</h2>
-                                    <p>A program which is able to play a game of 2048, with it reaching the target score
-                                        2048 being guaranteed.</p>
-                                    <p>In the same vein as the Tetris AI (previous slide), it works by trying all
-                                        possible moves for a given block on a clone of the game scores them based on
-                                        pre-defined criteria. The highest-scoring move is then chosen to play with.</p>
-                                    <p>A more detailed explanation of the inner workings of the AI is available on
-                                        GitHub.</p>
-                                    <a target="_blank" href="https://github.com/Ernzst/2048-AI">View on GitHub</a>
-                                </div>
-                                <img class="carousel-slide image" src="media/images/2048.png"
-                                     alt="Screenshots of the AI">
-                            </div>
-                        </div>
-                    </li>
-                </ol>
-            </section>
+        <div class="header">
+            <ion-icon size="large" name="code-slash"></ion-icon>
+            <h1 class="group-title">Portfolio</h1>
         </div>
+        <p>A small subset of projects I'd like to share with you.</p>
+
+        <div class="main-gallery js-flickity"
+             data-flickity-options='{ "cellAlign": "left", "contain": true }'>
+            <div class="gallery-cell">
+                <div class="carousel-slide">
+                    <div class="carousel-slide carousel-content">
+                        <h2>Universe Simulator</h2>
+                        <p>A desktop-based application giving the user the tools to better visualise our
+                            Solar System.</p>
+                        <p>The user can also create their own 3D simulations to better understand
+                            orbital mechanics and how they affect celestial bodies. </p>
+                        <p>Each planet the user chooses to
+                            add can have its: radius, mass, texture, atmosphere, day length, tidal locking
+                            and orbital eccentricity adjusted as well as the option to add a moon to them;
+                            the user can also then set the position of each planet (relative to the star)
+                            giving them free reign on how they set up their simulation.</p>
+                        <p>Custom backgrounds and textures can be uploaded to personalise the user's
+                            simulation even more.</p>
+                        <a id="contact" target="_blank"
+                           href="https://github.com/Ernzst/Universe-Simulator"
+                           class="flat-button"><span>View on GitHub</span>
+                        </a>
+                    </div>
+                    <div class="carousel-slide image">
+                        <img border="2px solid white" src="media/images/universe_simulator.png"
+                             alt="Screenshot of the main menu."></div>
+                </div>
+            </div>
+
+            <div class="gallery-cell">
+                <div class="carousel-slide">
+                    <div class="carousel-slide carousel-content">
+                        <h2>SpeedTyp_r</h2>
+                        <p>A desktop-based typing game which aims to improve both the vocabulary and typing
+                            speed of the user.</p>
+                        <p>The aim of the game is simple: type the word you see on the screen as quickly as
+                            possible. The user is shown 12 words and is rewarded with in-game currency based
+                            on their time taken. This currency is used to unlock new word sets in the
+                            game.</p>
+                        <p>In singleplayer, earn coins and set the best times you can to earn a top spot on
+                            the leaderboards, yielding bonus rewards.</p>
+                        <p>The multiplayer puts you up against another player in a head-to-head with the
+                            winner reaping all the rewards - the loser gets nothing. There are no skips so
+                            type accurately.</p>
+                        <a id="speedtypr" target="_blank"
+                           href="https://github.com/Ernzst/SpeedTyp_r_III"
+                           class="flat-button"><span>View on GitHub</span>
+                        </a>
+                    </div>
+                    <img class="carousel-slide image" src="media/images/speedtyp_r.png"
+                         alt="Screenshots of the various singleplayer menus.">
+                </div>
+            </div>
+
+            <div class="gallery-cell">
+                <div class="carousel-slide">
+                    <div class="carousel-slide carousel-content">
+                        <h2>Tetris AI</h2>
+                        <p>A python program which is able to play a perfect game of Tetris, playing forever
+                            until reaching the maximum allowed score.</p>
+                        <p>For each Tetromino the current game context is analysed and then all possible
+                            moves for a Tetromino on separate game clones are tried. Each move is then
+                            scored based off pre-defined criteria. The highest scoring move is then applied
+                            to the real game.</p>
+                        <p>To improve the success rate of the AI, it also looks ahead to the next block
+                            (shown in the top right) and plays with it in another game clone. The
+                            highest-scoring move for both the current and lookahead block are then
+                            applied.</p>
+                        <p>A more detailed explanation of the AI is available on the GitHub page</p>
+                        <a id="tetris" target="_blank"
+                           href="https://github.com/Ernzst/Tetris-AI"
+                           class="flat-button"><span>View on GitHub</span>
+                        </a>
+                    </div>
+                    <img class="carousel-slide image" src="media/images/tetris.png"
+                         alt="Screenshots of the AI">
+                </div>
+            </div>
+
+            <div class="gallery-cell">
+                <div class="carousel-slide">
+                    <div class="carousel-slide carousel-content">
+                        <h2>2048 AI</h2>
+                        <p>A program which is able to play a game of 2048, with it reaching the target score
+                            2048 being guaranteed.</p>
+                        <p>In the same vein as the Tetris AI (previous slide), it works by trying all
+                            possible moves for a given block on a clone of the game scores them based on
+                            pre-defined criteria. The highest-scoring move is then chosen to play with.</p>
+                        <p>A more detailed explanation of the inner workings of the AI is available on
+                            GitHub.</p>
+                        <a id="2048" target="_blank"
+                           href="https://github.com/Ernzst/2048-AI"
+                           class="flat-button"><span>View on GitHub</span>
+                        </a>
+                    </div>
+                    <img class="carousel-slide image" src="media/images/2048.png"
+                         alt="Screenshots of the AI">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
+<script src="scripts/flickity.pkgd.min.js"></script>
 </body>
 </html>

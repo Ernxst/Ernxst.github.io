@@ -350,7 +350,7 @@ details[open] summary:after {
     display: block;
 }
 
-#contact {
+.flat-button {
     color: var(--main);
     font-size: 13px;
     background: transparent;
@@ -364,7 +364,7 @@ details[open] summary:after {
     padding: 10px 18px;
 }
 
-#contact:hover {
+.flat-button:hover {
     color: var(--dark);
     background: var(--accent);
 }

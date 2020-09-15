@@ -27,6 +27,7 @@
 .carousel-slide .image {
     width: 45%;
     margin: 0 auto;
+    vertical-align: middle;
 }
 
 .carousel-slide .image img {

@@ -423,4 +423,5 @@ details[open] summary:after {
     overflow: auto;
     margin-top: 8px;
     font-family: monospace;
+    resize: none;
 }

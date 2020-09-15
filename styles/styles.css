@@ -365,7 +365,7 @@ details[open] summary:after {
 }
 
 #contact:hover {
-    color: transparent;
+    color: var(--dark);
     background: var(--accent);
 }
 

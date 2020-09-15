@@ -88,6 +88,7 @@ p {
 .nav-item a ion-icon {
     transition: 0.3s ease-out;
     color: white;
+    zoom: 0.7;
 }
 
 .nav-item a span, .active-item a span {
@@ -316,4 +317,58 @@ details[open] summary:after {
 #contact:hover {
     color: transparent;
     background: var(--accent);
+}
+
+.contact {
+    margin-left: 48px;
+    width: 40%;
+}
+
+.contact-form {
+    width: 100%;
+    display: block;
+}
+
+.contact-form .row {
+    display: inline-flex;
+    width: 100%;
+    margin-right: 8px;
+}
+
+.contact-form input[type=text], .contact-form input[type=email]{
+    width: 100%;
+    border: 0;
+    background: #2b2b2b;
+    height: 50px;
+    font-size: 16px;
+    color: #8d8d8d;
+    padding: 0 20px;
+    box-sizing: border-box;
+    cursor: text;
+    z-index: 1;
+    margin-top: 8px;
+}
+
+#contact-name {
+    margin-right: 4px;
+    margin-top: 0;
+}
+
+#contact-email {
+    margin-left: 4px;
+    margin-top: 0;
+}
+
+.contact-form textarea {
+    width: 100%;
+    border: 0;
+    background: #2b2b2b;
+    height: 50px;
+    font-size: 16px;
+    color: #8d8d8d;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 200px;
+    overflow: auto;
+    margin-top: 8px;
 }

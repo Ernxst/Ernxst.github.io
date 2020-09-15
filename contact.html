@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact me</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/Carousel.css">
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css" rel="stylesheet"
+          type="text/css"/>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#rain").load("rain.html");
+        });
+    </script>
+</head>
+<body>
+<div id="header"></div>
+<div id="rain"></div>
+
+<div class="content">
+    <div class="header">
+        <ion-icon size="large" name="send"></ion-icon>
+        <h1 class="group-title">Contact me</h1>
+    </div>
+    <div class="contact">
+        <p>I am currently interested in freelance opportunities
+        - especially small-scale projects. Fill out the form below to get in touch.</p>
+        <form method="post" class="contact-form">
+            <div class="row">
+                <input id="contact-name" type="text" placeholder="Name" required>
+                <input id="contact-email" type="email" placeholder="Email" required>
+            </div>
+            <input id="contact-subject" type="text" placeholder="Subject" required>
+            <textarea id="contact-message" placeholder="Message" required></textarea>
+            <input id="contact" type="submit" value="SEND">
+        </form>
+    </div>
+</div>
+</body>
+</html>

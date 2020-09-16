@@ -297,11 +297,21 @@ ion-icon {
 }
 
 .skills .text-zone li ion-icon {
-    zoom: 0.7
+    zoom: 0.7;
+    color: white;
 }
 
 .skills p {
     margin-left: var(--margin_left);
+}
+
+.skills p a {
+    text-decoration: none;
+    color: var(--main);
+}
+
+.skills p a:hover {
+    color: lightpink;
 }
 
 .skills h2 {

@@ -1,4 +1,20 @@
+@media only screen and (hover: none) and (pointer: coarse) {
+    * { /* Disable animations */
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        -ms-transition: none !important;
+        transition: none !important;
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation:  none !important;
+    }
+}
+
 @media (max-width: 1000px) {
+
     .content {
         padding-left: 0;
         padding-top: 95px;

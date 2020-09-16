@@ -21,7 +21,8 @@ body {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     background: var(--dark);
     color: white;
 }
@@ -115,9 +116,9 @@ ion-icon {
     text-decoration: none;
     font-size: 8px;
     width: 100%;
-    margin-bottom: 15px;
-    line-height: 51px;
-    height: 51px;
+    margin-bottom: 8px;
+    line-height: 36px;
+    height: 36px;
     position: relative;
     cursor: pointer;
 }
@@ -134,7 +135,7 @@ ion-icon {
     font-weight: lighter;
     transition: 0.3s opacity;
     color: var(--accent);
-    margin-top: -48px;
+    margin-top: -32px;
     text-decoration: none;
     display: block;
 }

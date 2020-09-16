@@ -1,0 +1,47 @@
+.carousel-slide {
+    width: calc(100% - 128px);
+    margin-left: 64px;
+    margin-right: 64px;
+    height: 100%;
+    display: inline-flex;
+    color: white;
+}
+
+.carousel-content {
+    display: block;
+    width: 50%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-content h2 {
+    font-size: 24px;
+    margin-left: 8px;
+}
+
+.carousel-content p {
+    width: calc(100% - 8px);
+    font-size: 18px;
+    margin-left: 8px;
+}
+
+.image {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.image img {
+    padding: 8px;
+    width: calc(100% - 16px);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+

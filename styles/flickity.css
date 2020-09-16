@@ -119,6 +119,10 @@ https://flickity.metafizzy.co
   line-height: 1;
 }
 
+.flickity-page-dots .dot:hover {
+  background: violet;
+}
+
 .flickity-rtl .flickity-page-dots { direction: rtl; }
 
 .flickity-page-dots .dot {
@@ -140,8 +144,6 @@ https://flickity.metafizzy.co
   width: 100%;
   counter-increment: gallery-cell;
   display: block;
-  margin-left: 32px;
-  margin-right: 32px;
 }
 
 .main-gallery {

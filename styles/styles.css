@@ -88,7 +88,7 @@ ion-icon {
         transform: translateY(100%);
     }
     100% {
-        transform: translateY(0px);
+        transform: translateY(0);
     }
 }
 
@@ -167,11 +167,6 @@ ion-icon {
     color: var(--mid);
 }
 
-.active-item a:hover span, .active-item a:hover span {
-    color: var(--mid);
-    opacity: 1;
-}
-
 .links {
     height: 20%;
     width: 100%;
@@ -246,7 +241,7 @@ ion-icon {
     line-height: 25px;
     font-size: 1em;
     position: relative;
-    flex: 1 1 auto;;
+    flex: 1 1 auto;
     width: 1%;
     white-space: nowrap;
     justify-content: left;
@@ -350,7 +345,7 @@ details summary::-webkit-details-marker {
 
 summary {
     outline: 0;
-    margin: 8px 8px;
+    margin: 8px;
     font-size: 1.5em;
     line-height: 2em;
     background-color: var(--main);

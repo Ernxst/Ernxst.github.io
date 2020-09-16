@@ -117,6 +117,7 @@ https://flickity.metafizzy.co
   list-style: none;
   text-align: center;
   line-height: 1;
+  background: transparent;
 }
 
 .flickity-page-dots .dot:hover {

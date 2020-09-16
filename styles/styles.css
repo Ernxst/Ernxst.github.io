@@ -17,8 +17,8 @@
 
 body {
     font-family: monospace, serif;
-    display: flex;
-    flex-direction: column;
+    /*display: flex;*/
+    /*flex-direction: column;*/
     margin: 0;
     padding: 0;
     overflow-y: auto;
@@ -220,8 +220,6 @@ ion-icon {
 
 .group-subtitle h2 {
     width: 100%;
-    float: right;
-    justify-content: right;
 }
 
 .group-body p {
@@ -372,6 +370,10 @@ details[open] summary:after {
 .contact {
     margin-left: 48px;
     width: 40%;
+}
+
+.contact .text-zone {
+    width: 100%;
 }
 
 .contact-form {

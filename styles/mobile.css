@@ -1,0 +1,83 @@
+@media (max-width: 1000px) {
+    .content {
+        padding-left: 0;
+        padding-top: 95px;
+        width: 100%;
+    }
+
+    .navbar {
+        height: 60px;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 32px;
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+    .nav-placeholder {
+        width: 0;
+        height: 0;
+    }
+
+    .nav-buttons {
+        width: 85%;
+        height: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0 0 0 16px;
+    }
+
+    .nav-item, .active-item {
+        float: left;
+        height: 100%;
+        margin-right: 16px;
+    }
+
+    .nav-item a, .active-item a {
+        height: 100%;
+    }
+
+    .nav-item a ion-icon, .active-item a ion-icon {
+        padding-top: 30px;
+    }
+
+    .nav-item a span, .active-item a span {
+        vertical-align: middle;
+        padding-top: 5px;
+    }
+
+    .links {
+        width: 15%;
+        height: 100%;
+        display: inline-flex;
+    }
+
+    .link-item {
+        height: 100%;
+    }
+
+    .link-item a {
+        height: 100%;
+        padding: 0 6px;
+        line-height: normal;
+        display: inline-block;
+    }
+
+    .link-item a ion-icon {
+        height: 100%;
+    }
+
+    .contact, .about, .skills, .group {
+        width: calc(100% - 128px);
+    }
+
+    .carousel-slide {
+        display: block;
+    }
+    .carousel-content {
+        width: 100%;
+    }
+    .image {
+        width: 100%;
+    }
+}

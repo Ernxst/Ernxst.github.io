@@ -11,6 +11,13 @@
         -ms-animation: none !important;
         animation:  none !important;
     }
+
+    /*.content {*/
+    /*}*/
+
+    /*.navbar {*/
+    /*    position: relative;*/
+    /*}*/
 }
 
 @media (max-width: 1000px) {

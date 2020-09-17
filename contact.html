@@ -6,6 +6,7 @@
     <link rel="icon" href="media/icons/icon.ico">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/mobile.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css" rel="stylesheet"
@@ -41,7 +42,13 @@
                 </div>
                 <input name="subject" id="contact-subject" type="text" placeholder="Subject" required>
                 <textarea name="message" id="contact-message" placeholder="Message" required></textarea>
-                <input id="contact" class="flat-button" type="submit" value="SEND">
+
+                <div id="captcha-row">
+                    <div id="captcha-container">
+                    <div class="g-recaptcha" data-sitekey="6Lc-Gc0ZAAAAANhky4b6amp8C_GlCXXpvtBDCE-4"></div>
+                </div>
+                    <input id="form-submit" class="flat-button" type="submit" value="SEND">
+                </div>
             </form>
         </div>
     </div>

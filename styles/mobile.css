@@ -17,6 +17,22 @@
         animation: none;
         transform: none;
     }
+
+    .nav-buttons {
+        width: 65%;
+    }
+
+    .nav-item a ion-icon {
+        zoom: 0.5;
+    }
+
+    .links {
+        width: 35%;
+    }
+
+    .link-item a ion-icon {
+        zoom: 0.7;
+    }
 }
 
 @media (max-width: 1000px) {

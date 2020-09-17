@@ -2,7 +2,6 @@
     width: calc(100% - 128px);
     margin-left: 64px;
     margin-right: 64px;
-    height: 100%;
     display: inline-flex;
     color: white;
 }
@@ -41,4 +40,8 @@
     left: 0;
     right: 0;
     bottom: 0;
+}
+
+#universe-simulator {
+    max-height: 100%;
 }

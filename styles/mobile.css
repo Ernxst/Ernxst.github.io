@@ -14,11 +14,21 @@
 }
 
 @media (max-width: 1000px) {
-
     .content {
         padding-left: 0;
-        padding-top: 95px;
-        width: 100%;
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-top: 108px;
+        scroll-margin-top: 60px;
+        scroll-margin-left: 0;
+        width: calc(100% - 24px);
+        top: 0;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+
+    #portfolio {
+        height: calc(100% - 108px);
         top: 0;
         -webkit-transform: translate(-50%, 0);
         transform: translate(-50%, 0);
@@ -87,16 +97,40 @@
     }
 
     .contact, .about, .skills, .group {
-        width: calc(100% - 128px);
+        margin-left: 0;
+        width: calc(100% - 24px);
+    }
+
+    .about .text-zone, .skills .text-zone, .portfolio {
+        width: calc(100% - 48px);
     }
 
     .carousel-slide {
-        display: block;
+        display: flex;
+        flex-direction: column-reverse;
+        overflow: auto;
     }
+
     .carousel-content {
         width: 100%;
+        height: auto;
     }
+
+    .carousel-content h2 {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .carousel-content p {
+        margin-left: 0;
+        width: 100%;
+    }
+
     .image {
         width: 100%;
+    }
+
+    .image img {
+        position: relative;
     }
 }

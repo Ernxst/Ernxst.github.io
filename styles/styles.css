@@ -55,9 +55,27 @@ ion-icon {
     vertical-align: middle;
 }
 
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--main);
+}
+
 .content {
-    padding-left: 95px;
+    margin-left: 95px;
     width: calc(100% - 95px);
+    scroll-margin-left: 95px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -66,6 +84,12 @@ ion-icon {
     overflow: auto;
     animation: slideLeft .8s ease forwards;
     transition: all .8s ease;
+}
+
+#portfolio {
+    height: 100%;
+    -webkit-transform: translate(-50%, -25%);
+    transform: translate(-50%, -25%);
 }
 
 .navbar {
@@ -325,7 +349,7 @@ ion-icon {
 
 .portfolio {
     margin-left: var(--margin_left);
-    width: calc(100% - var(--margin_left));
+    width: calc(100% - var(--margin_left) - 95px);
 }
 
 .portfolio p {

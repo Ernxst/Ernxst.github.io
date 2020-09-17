@@ -25,7 +25,7 @@
 <div id="header"></div>
 <div id="rain"></div>
 
-<div class="content">
+<div id="portfolio" class="content">
     <div class="portfolio">
         <div class="header">
             <ion-icon size="large" name="code-slash"></ion-icon>
@@ -34,11 +34,12 @@
         <p>A small subset of projects I'd like to share with you.</p>
 
         <div class="main-gallery js-flickity"
-             data-flickity-options='{ "cellAlign": "left", "contain": true }'>
+             data-flickity-options='{ "cellAlign": "left", "contain": true, "wrapAround": true,
+              "autoPlay": 5000}'>
             <div class="gallery-cell">
                 <div class="carousel-slide">
                     <div class="image">
-                        <img src="media/images/universe_simulator.png"
+                        <img id="universe-simulator" src="media/images/universe_simulator.png"
                              alt="Screenshot of the main menu.">
                     </div>
                     <div class="carousel-content">
@@ -120,7 +121,7 @@
                     <div class="image">
                         <img src="media/images/2048.png" alt="Screenshots of the AI">
                     </div>
-                    <div class="carousel-slide carousel-content">
+                    <div class="carousel-content">
                         <h2>2048 AI</h2>
                         <p>A program which is able to play a game of 2048, with it reaching the target score
                             2048 being guaranteed.</p>

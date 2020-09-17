@@ -1,10 +1,5 @@
 @media only screen and (hover: none) and (pointer: coarse) {
     * { /* Disable animations */
-        -webkit-transition: none !important;
-        -moz-transition: none !important;
-        -o-transition: none !important;
-        -ms-transition: none !important;
-        transition: none !important;
         -webkit-animation: none !important;
         -moz-animation: none !important;
         -o-animation: none !important;
@@ -12,8 +7,15 @@
         animation:  none !important;
     }
 
+    .snow {
+        visibility: hidden;
+        filter: none;
+        animation: none;
+    }
+
     .navbar {
-        position: relative;
+        animation: none;
+        transform: none;
     }
 }
 

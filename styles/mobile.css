@@ -12,23 +12,19 @@
         animation:  none !important;
     }
 
-    /*.content {*/
-    /*}*/
-
-    /*.navbar {*/
-    /*    position: relative;*/
-    /*}*/
+    .navbar {
+        position: relative;
+    }
 }
 
 @media (max-width: 1000px) {
     body {
         display: block;
+        width: 100%;
     }
 
     .content {
-        margin-left: 12px;
-        margin-right: 12px;
-        margin-top: 60px;
+        margin: 60px 12px 0 0;
         scroll-margin-top: 60px;
         scroll-margin-left: 0;
         width: calc(100% - 24px);
@@ -108,7 +104,17 @@
 
     .contact, .about, .skills, .group {
         margin-left: 0;
-        width: calc(100% - 24px);
+        width: 100%;
+    }
+
+    .contact {
+        height: 100%;
+    }
+
+    .contact .text-zone {
+        margin-left: 48px;
+        width: calc(100% - 56px);
+        margin-right: 0;
     }
 
     .about .text-zone, .skills .text-zone, .portfolio {
@@ -117,17 +123,21 @@
 
     .portfolio {
         margin-left: 0;
+        width: 100%;
     }
 
     .carousel-slide {
         display: flex;
         flex-direction: column-reverse;
         overflow: auto;
+        width: calc(100% - 24px);
+        margin: 0;
     }
 
     .carousel-content {
-        width: 100%;
+        width: calc(100% - 48px);
         height: auto;
+        margin-left: 48px;
     }
 
     .carousel-content h2 {
@@ -138,13 +148,41 @@
     .carousel-content p {
         margin-left: 0;
         width: 100%;
+        font-size: 12px;
+    }
+
+    .main-gallery {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
     }
 
     .image {
-        width: 100%;
+        margin: 0 0 0 48px;
+        width: calc(100% - 48px)
     }
 
     .image img {
         position: relative;
+        margin: 0;
+    }
+
+    #captcha-row {
+        display: flex;
+        flex-direction: column;
+        margin-top: 8px;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    #captcha-container {
+        width: 100%;
+        padding-bottom: 8px;
+    }
+
+    #form-submit {
+        width: 100%;
+        -webkit-transform: none;
+        transform: none;
     }
 }

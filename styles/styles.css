@@ -458,7 +458,7 @@ details[open] summary:after {
     background: #515151;
     height: 50px;
     font-size: 16px;
-    color: #8d8d8d;
+    color: #111111;
     padding: 0 20px;
     box-sizing: border-box;
     cursor: text;
@@ -483,7 +483,7 @@ details[open] summary:after {
     background: #515151;
     height: 50px;
     font-size: 16px;
-    color: #8d8d8d;
+    color: #111111;
     padding: 20px;
     box-sizing: border-box;
     min-height: 200px;

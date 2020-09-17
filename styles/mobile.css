@@ -14,11 +14,14 @@
 }
 
 @media (max-width: 1000px) {
+    body {
+        display: block;
+    }
+
     .content {
-        padding-left: 0;
         margin-left: 12px;
         margin-right: 12px;
-        margin-top: 108px;
+        margin-top: 60px;
         scroll-margin-top: 60px;
         scroll-margin-left: 0;
         width: calc(100% - 24px);
@@ -28,7 +31,7 @@
     }
 
     #portfolio {
-        height: calc(100% - 108px);
+        height: calc(100% - 60px);
         top: 0;
         -webkit-transform: translate(-50%, 0);
         transform: translate(-50%, 0);
@@ -103,6 +106,10 @@
 
     .about .text-zone, .skills .text-zone, .portfolio {
         width: calc(100% - 48px);
+    }
+
+    .portfolio {
+        margin-left: 0;
     }
 
     .carousel-slide {

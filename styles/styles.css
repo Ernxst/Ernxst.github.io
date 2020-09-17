@@ -17,6 +17,7 @@
 
 html {
     height: 100%;
+    background: var(--dark_gray);
     background: radial-gradient(ellipse at bottom, #333333 0%, #181818 100%);
     overflow: hidden;
 }
@@ -244,10 +245,6 @@ ion-icon {
 #animated-title {
     font-weight: 900;
     text-decoration: none;
-    color: white;
-}
-
-#animated-title:hover {
     color: var(--main);
 }
 

@@ -44,7 +44,6 @@ function animate (mesh, scene, camera, renderer) {
 }
 
 function render (mesh) {
-    mesh.rotation.x += 0.005;
     mesh.rotation.y += 0.005;
     mesh.rotation.z += 0.005;
 }

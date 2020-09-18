@@ -179,7 +179,7 @@ ion-icon {
 }
 
 .active-item a ion-icon {
-    color: var(--mid);
+    color: var(--mid) !important;
     transition: 0.3s ease-out;
     zoom: 0.7;
 }

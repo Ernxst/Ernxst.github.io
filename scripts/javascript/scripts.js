@@ -3,8 +3,8 @@ window.onload = function () {
     const header = document.getElementById("nav-buttons");
 
     let activeBtn = header.getElementsByClassName("active-item")[0];
-    if (activeBtn && ! url.includes(activeBtn.id)) {
-        activeBtn.className = "nav-item";
+    if (activeBtn && ! url.includes(activeBtn.id.toString())) {
+        activeBtn.classList.remove("active-item")
     }
 
     let btns = header.getElementsByClassName("nav-item");
@@ -22,6 +22,6 @@ window.onload = function () {
 
     if (! activated) {
         let btn = document.getElementById("index.html");
-        btn.className = "active-item"
+        btn.classList.add("active-item")
     }
 };

@@ -16,6 +16,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js" async></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="scripts/javascript/flickity.pkgd.min.js" async></script>
     <script>
         $(function () {
             $("#header").load("header.html");
@@ -37,7 +38,7 @@
 
         <div class="main-gallery js-flickity"
              data-flickity-options='{ "cellAlign": "left", "contain": true, "wrapAround": true,
-              "autoPlay": 5000, "lazyLoad": 1}'>
+              "autoPlay": 5000, "lazyLoad": 4, "setGallerySize": false}'>
             <div class="gallery-cell">
                 <div class="carousel-slide">
                     <div class="image">
@@ -142,7 +143,5 @@
         </div>
     </div>
 </div>
-
-<script src="scripts/javascript/flickity.pkgd.min.js"></script>
 </body>
 </html>

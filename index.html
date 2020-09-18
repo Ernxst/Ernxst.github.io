@@ -15,7 +15,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js" async></script>
     <script>
-        $(function(){
+        $(function () {
             $("#header").load("header.html");
             $("#rain").load("rain.html");
         });
@@ -27,22 +27,27 @@
 <div id="rain"></div>
 
 <div class="content">
-    <div class="group">
-        <div class="header">
+    <div class="index">
+        <div class="page-header-container">
             <ion-icon size="large" name="home"></ion-icon>
             <div>
-                <h1 class="group-title">Hi,</h1>
-                <h1 class="group-title">I'm
+                <h1 class="page-header">Hi,</h1>
+                <h1 class="page-header">I'm
                     <a href="about.html" id="animated-title">Ernest</a>,
                 </h1>
-                <h1 class="group-title">computer scientist.</h1>
+                <h1 class="page-header">computer scientist.</h1>
             </div>
         </div>
-        <p>&#8250; Problem Solver / Multi-language Developer</p>
-        <p>Check out the rest of my site to learn more about me.</p>
-        <a id="contact" href="contact.html" class="flat-button">
-            <span>Contact Me!</span>
-        </a>
+        <div class="text-zone">
+            <p>&#8250; Problem Solver / Multi-language Developer</p>
+            <p>Check out the rest of my site to learn more about me.</p>
+            <a id="contact" href="contact.html" class="flat-button">
+                <span>Contact Me!</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="media">
     </div>
 </div>
 </body>

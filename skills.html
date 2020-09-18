@@ -15,7 +15,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js" async></script>
     <script>
-        $(function(){
+        $(function () {
             $("#header").load("header.html");
             $("#rain").load("rain.html");
         });
@@ -27,13 +27,14 @@
 
 <div class="content">
     <div class="skills">
-        <div class="header">
+        <div class="page-header-container">
             <ion-icon size="large" name="settings"></ion-icon>
-            <h1 class="group-title">Skills</h1>
+            <h1 class="page-header">Skills</h1>
         </div>
 
-    <div class="skills text-zone">
-        <p>I have a moderate amount of experience with a range of programming languages (listed below) with my main language of expertise being Python.</p>
+        <div class="text-zone">
+            <p>I have a moderate amount of experience with a range of programming languages (listed below) with my main
+                language of expertise being Python.</p>
             <ul>
                 <li>
                     <ion-icon size="large" name="logo-python"></ion-icon>
@@ -76,18 +77,20 @@
                 </li>
 
             </ul>
-        <h2>&#8250; Dev Tools</h2>
-        <p>&#8250;&nbsp;&nbsp;&nbsp;GitHub, GitLab, VS Code, Intellij, Webstorm,
-            PyCharm, Terminal</p>
-
-        <p>
-            Visit my
-            <a target="_blank" href="https://www.linkedin.com/in/ernxst/"
-               rel="noopener">LinkedIn</a> profile for more details.
-        </p>
+            <h2>&#8250; Dev Tools</h2>
+            <p id="dev-tools">&#8250;&nbsp;&nbsp;&nbsp;GitHub, GitLab, VS Code, Intellij, Webstorm,
+                PyCharm, Terminal</p>
+            <br>
+            <p>
+                Visit my
+                <a target="_blank" href="https://www.linkedin.com/in/ernxst/"
+                   rel="noopener">LinkedIn</a> profile for more details.
+            </p>
+        </div>
     </div>
-    </div>
 
+    <div class="media">
+    </div>
 </div>
 </body>
 </html>

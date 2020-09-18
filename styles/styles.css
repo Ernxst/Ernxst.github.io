@@ -5,14 +5,7 @@
     --dark_gray: #181818;
     --dark: #222;
     --radius: 6px;
-    --padding: 8px 16px;
     --margin_left: 32px;
-    --nav_width: 60px;
-}
-
-@font-face {
-    font-family: Coolvetica;
-    src: url("../media/fonts/Coolvetica.ttf");
 }
 
 html {
@@ -21,6 +14,7 @@ html {
     background: radial-gradient(ellipse at bottom, #333333 0%, #181818 100%);
     overflow: hidden;
 }
+
 body {
     font-family: monospace, serif;
     display: flex;
@@ -43,17 +37,16 @@ h2 {
     margin: 0
 }
 
-h3 {
-    size: 1.3em;
-    font-weight: bold;
-}
-
 p {
     font-size: 16px;
 }
 
 ion-icon {
     vertical-align: middle;
+}
+
+ion-icon[size=large] {
+    zoom: 0.7;
 }
 
 ::-webkit-scrollbar {
@@ -79,24 +72,15 @@ ion-icon {
     scroll-margin-left: 95px;
     scroll-margin-top: 0;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     overflow: auto;
     animation: slideLeft .8s ease forwards;
     transition: all .8s ease;
-}
-
-#portfolio {
+    display: inline-flex;
     height: 100%;
-    -webkit-transform: translate(-50%, -25%);
-    transform: translate(-50%, -25%);
 }
 
 .navbar {
     height: 100%;
-    background: rgba(24, 24, 24, 0);
     overflow: hidden;
     margin-right: 32px;
     position: fixed;
@@ -110,12 +94,8 @@ ion-icon {
 }
 
 @keyframes slideUp {
-    0% {
-        transform: translateY(100%);
-    }
-    100% {
-        transform: translateY(0);
-    }
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(0); }
 }
 
 @-webkit-keyframes slideLeft {
@@ -154,7 +134,6 @@ ion-icon {
 .nav-item a ion-icon {
     transition: 0.3s ease-out;
     color: white;
-    zoom: 0.7;
 }
 
 .nav-item a span, .active-item a span {
@@ -181,7 +160,6 @@ ion-icon {
 .active-item a ion-icon {
     color: var(--mid) !important;
     transition: 0.3s ease-out;
-    zoom: 0.7;
 }
 
 .active-item a ion-icon p {
@@ -213,38 +191,63 @@ ion-icon {
     color: var(--accent)
 }
 
-.header {
+.page-header-container {
     display: inline-flex;
     width: 100%;
 }
 
-.header ion-icon {
+.page-header-container ion-icon {
     padding: 0 8px;
     height: 1.3em;
+    zoom: 1;
 }
 
-.header div {
+.page-header-container div {
     display: block;
 }
 
-.group {
-    position: relative;
-    display: block;
-    width: 33%;
-    margin-left: var(--margin_left);
-}
-
-.group p {
-    padding-left: 48px;
-}
-
-.group-title h1, .group h1 a {
-    font-weight: 500;
+.page-header h1, .page-header h1 a {
     width: 100%;
 }
 
+
+.index, .about, .skills, .portfolio, .contact {
+    display: block;
+    margin: 0;
+    height: 50%;
+    transform: translate(0, 50%);
+    padding: 0;
+}
+
+.index, .about, .skills, .contact {
+    width: 45%;
+}
+
+div .text-zone {
+    width: calc(100% - var(--margin_left) - 16px);
+    padding: 16px 0 0;
+    margin: 0 16px 0 48px;
+}
+
+ .text-zone p {
+     margin: 0 0 12px 0;
+     width: 100%;
+ }
+
+.text-zone p a {
+    text-decoration: none;
+    color: var(--main);
+}
+
+.text-zone p a:hover {
+    color: lightpink;
+}
+
+.media {
+    flex-grow: 1;
+}
+
 #animated-title {
-    font-weight: 900;
     text-decoration: none;
     color: var(--main);
 }
@@ -254,52 +257,9 @@ ion-icon {
     content: "\A Nkansah-Badu";
 }
 
-.group-subtitle h2 {
-    width: 100%;
-}
-
-.group-body p {
-    display: block;
-    line-height: 25px;
-    font-size: 1em;
-    position: relative;
-    flex: 1 1 auto;
-    width: 1%;
-    white-space: nowrap;
-    justify-content: left;
-}
-
-.about {
-    margin-left: var(--margin_left);
-    width: 45%;
-}
-
-.about .text-zone {
-    width: 100%;
-    margin-left: 48px;
-    padding: 0;
-}
-
-.about .text-zone p {
-    vertical-align: middle;
-    padding: 0;
-}
-
-.about .text-zone p ion-icon {
-    zoom: 0.7;
-    text-align: center;
-    margin-top: 0;
-    vertical-align: middle;
-}
-
-.skills {
-    margin-left: var(--margin_left);
-    width: 45%;
-}
-
-.skills .text-zone {
-    width: 100%;
-    margin-left: 48px;
+.skills h2 {
+    margin-top: 16px;
+    padding-top: 16px;
 }
 
 .skills .text-zone ul {
@@ -313,41 +273,16 @@ ion-icon {
     margin-bottom: 12px;
 }
 
-.skills .text-zone li ion-icon {
-    zoom: 0.7;
-    color: white;
-}
-
-.skills p {
-    margin-left: var(--margin_left);
-}
-
-.skills p a {
-    text-decoration: none;
-    color: var(--main);
-}
-
-.skills p a:hover {
-    color: lightpink;
-}
-
-.skills h2 {
-    margin-top: 16px;
-    padding-top: 16px;
-}
-
 .skills .text-zone p {
-    padding-top: 16px;
     margin: 0;
 }
 
-.skills .text-zone p a:hover {
-    color: var(--accent);
+#dev-tools {
+    margin-top: 12px;
 }
 
 .portfolio {
-    margin-left: var(--margin_left);
-    width: calc(100% - var(--margin_left) - 95px);
+    width: 100%;
 }
 
 .portfolio p {
@@ -355,46 +290,7 @@ ion-icon {
     font-size: 16px;
 }
 
-details {
-    display: block;
-    text-decoration: none;
-    color: white;
-}
-
-details summary::-webkit-details-marker {
-    display: none;
-}
-
-summary {
-    outline: 0;
-    margin: 8px;
-    font-size: 1.5em;
-    line-height: 2em;
-    background-color: var(--main);
-    font-weight: bold;
-    padding: 8px 8em 8px 10px;
-}
-
-summary:hover {
-    background-color: var(--accent);
-}
-
-summary:after {
-    margin-right: 16px;
-    margin-left: 8px;
-    float: left;
-    content: "\f125";
-    font-family: "ionicons", serif;
-    transition: 0.35s;
-}
-
-details[open] summary:after {
-    transition: 0.35s;
-    transform: rotate(90deg);
-    display: block;
-}
-
-.flat-button {
+.flat-button, input[type=submit] {
     color: var(--main);
     font-size: 13px;
     background: transparent;
@@ -409,18 +305,9 @@ details[open] summary:after {
     transition: all 0.3s;
 }
 
-.flat-button:hover {
+.flat-button:hover, input[type=submit]:hover {
     color: var(--dark);
     background: var(--accent);
-}
-
-.contact {
-    margin-left: 48px;
-    width: 40%;
-}
-
-.contact .text-zone {
-    width: 100%;
 }
 
 .contact-form {
@@ -445,7 +332,6 @@ details[open] summary:after {
 }
 
 #form-submit {
-    float: right;
     width: 30%;
     height: 100%;
     margin: 0;
@@ -453,7 +339,7 @@ details[open] summary:after {
     transform: translateY(100%);
 }
 
-.contact-form input[type=text], .contact-form input[type=email]{
+input[type=text], input[type=email]{
     width: 100%;
     border: 0;
     background: #515151;

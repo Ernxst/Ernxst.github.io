@@ -45,17 +45,17 @@
         margin: 84px 12px 0 0;
         scroll-margin-top: 84px;
         scroll-margin-left: 0;
-        width: calc(100% - 24px);
-        top: 0;
-        -webkit-transform: translate(-50%, 0);
-        transform: translate(-50%, 0);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .media {
+        width: 100%;
     }
 
     #portfolio {
-        height: calc(100% - 84px);
-        top: 0;
-        -webkit-transform: translate(-50%, 0);
-        transform: translate(-50%, 0);
+        height: 100%;
     }
 
     .navbar {
@@ -117,33 +117,27 @@
         height: 100%;
     }
 
-    .contact, .about, .skills, .group {
+    .index, .about, .skills, .portfolio, .contact {
         margin-left: 0;
-        width: 100%;
+        height: auto;
+        transform: none;
+        padding: 0;
+        width: 100% !important;
     }
 
-    .contact {
-        height: 100%;
-    }
-
-    .contact .text-zone {
-        margin-left: 48px;
-        width: calc(100% - 56px);
-        margin-right: 0;
-    }
-
-    .about .text-zone, .skills .text-zone, .portfolio {
-        width: calc(100% - 48px);
-    }
-
-    .portfolio {
-        margin-left: 0;
-        width: 100%;
+    div .text-zone {
+        width: calc(100% - 64px);
+        padding: 0;
+        margin: 0 16px 0 48px;
     }
 
     .flickity-prev-next-button {
         width: 22px;
         height: 22px;
+    }
+
+    .flickity-page-dots {
+        padding-bottom: 8px;
     }
 
     .main-gallery {
@@ -173,6 +167,10 @@
         margin-left: 0;
         width: 100%;
         font-size: 12px;
+    }
+
+    .carousel-content .flat-button {
+        margin-right: 16px;
     }
 
     .main-gallery {

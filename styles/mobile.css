@@ -42,8 +42,8 @@
     }
 
     .content {
-        margin: 84px 12px 0 0;
-        scroll-margin-top: 84px;
+        margin: 76px 12px 0 0;
+        scroll-margin-top: 76px;
         scroll-margin-left: 0;
         width: 100%;
         display: flex;
@@ -51,7 +51,8 @@
     }
 
     .media {
-        width: 100%;
+        width: 100% !important;
+        animation: none;
     }
 
     #portfolio {
@@ -118,17 +119,15 @@
     }
 
     .index, .about, .skills, .portfolio, .contact {
-        margin-left: 0;
-        height: auto;
         transform: none;
-        padding: 0;
+        height: auto;
         width: 100% !important;
+        animation: none;
     }
 
     div .text-zone {
         width: calc(100% - 64px);
         padding: 0;
-        margin: 0 16px 0 48px;
     }
 
     .flickity-prev-next-button {

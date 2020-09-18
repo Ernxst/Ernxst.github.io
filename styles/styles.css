@@ -73,8 +73,6 @@ ion-icon[size=large] {
     scroll-margin-top: 0;
     position: absolute;
     overflow: auto;
-    animation: slideLeft .8s ease forwards;
-    transition: all .8s ease;
     display: inline-flex;
     height: 100%;
 }
@@ -88,7 +86,6 @@ ion-icon[size=large] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    z-index: 3;
     transform: translateY(100%);
     animation: slideUp .8s ease-in-out forwards;
 }
@@ -99,11 +96,13 @@ ion-icon[size=large] {
 }
 
 @-webkit-keyframes slideLeft {
-    0% { left: 0; }
+    0% { left: 100%; }
+    100% { left: 0; }
 }
 
-@keyframes slideLeft {
-    0% { left: 0; }
+@keyframes slideDown {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(50%); }
 }
 
 .nav-placeholder {
@@ -162,10 +161,6 @@ ion-icon[size=large] {
     transition: 0.3s ease-out;
 }
 
-.active-item a ion-icon p {
-    visibility: hidden;
-}
-
 .active-item a:hover ion-icon, .nav-item a:hover ion-icon:hover {
     opacity: 0;
     color: var(--mid);
@@ -202,14 +197,10 @@ ion-icon[size=large] {
     zoom: 1;
 }
 
-.page-header-container div {
+.page-header-container div, .page-header h1, .page-header h1 a {
     display: block;
+    width: calc(100% - 1.3em - 8px);
 }
-
-.page-header h1, .page-header h1 a {
-    width: 100%;
-}
-
 
 .index, .about, .skills, .portfolio, .contact {
     display: block;
@@ -217,6 +208,8 @@ ion-icon[size=large] {
     height: 50%;
     transform: translate(0, 50%);
     padding: 0;
+    animation: slideDown .8s ease forwards;
+    transition: all .8s ease;
 }
 
 .index, .about, .skills, .contact {
@@ -245,6 +238,8 @@ div .text-zone {
 
 .media {
     flex-grow: 1;
+    animation: slideUp .8s ease forwards;
+    transition: all .8s ease;
 }
 
 #animated-title {
@@ -349,7 +344,6 @@ input[type=text], input[type=email]{
     padding: 0 20px;
     box-sizing: border-box;
     cursor: text;
-    z-index: 1;
     margin-top: 8px;
     font-family: monospace;
 }

@@ -72,13 +72,15 @@ export default class Sphere extends Object {
     }
 
     _createShell(shell) {
+        let material = new THREE.MeshPhongMaterial({
+            map: this._textureLoader.load(shell),
+            opacity: 1,
+            transparent: true,
+        });
+        material.depthWrite = false;
         return new THREE.Mesh(
             new THREE.SphereGeometry(this.radius * 1.02, this.SLICES, this.SLICES),
-            new THREE.MeshPhongMaterial({
-                map: this._textureLoader.load(shell),
-                opacity: 0.8,
-                transparent: true,
-            })
+            material
         );
     }
 

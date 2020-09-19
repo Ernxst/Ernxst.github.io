@@ -40,7 +40,7 @@ export default class Display {
         this._scene = new THREE.Scene();
         this._camera = new THREE.PerspectiveCamera(45, this._WIDTH / this._HEIGHT, 0.1, 1500);
         this._renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
-        this._renderer.setClearColor(0xFFFFFF, 0.0); // YAY!
+        this._renderer.setClearColor(0xFFFFFF, 0.0);
         this._renderer.setSize(this._WIDTH, this._HEIGHT);
         this._canvas.appendChild(this._renderer.domElement);
         this._texture_loader = new THREE.TextureLoader();

@@ -7,13 +7,22 @@ class IndexDisplay extends Display {
     }
 
     setupScene(scene) {
-        const sphere = new Sphere(scene, 2, [0, 0, 0],
-            'assets/textures/Earth.jpg', this._texture_loader);
-        return [sphere, sphere];
+        const sphere = new Sphere(scene, this._camera, 1, [0, 0, 0],
+            'assets/textures/Earth.jpg', 'assets/textures/earth_bump_map.jpg',
+            'assets/textures/earth_specular_map.png',
+            'assets/textures/EarthShell.png', this._texture_loader, 0x93cfef);
+        this.setupLighting()
+        return [sphere];
+    }
+
+    setupLighting() {
+        let light = new THREE.SpotLight(0xffffff, 2, 0, 5, 1);
+        light.position.set(2, 2, 2);
+        this._scene.add(light);
     }
 
     setupCamera(camera) {
-        this._camera.position.z = 5;
+        this._camera.position.z = 4;
     }
 
     render() {

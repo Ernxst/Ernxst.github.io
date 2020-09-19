@@ -7,6 +7,7 @@ export default class Display {
     _scene;
     _camera;
     _renderer;
+    _texture_loader;
     _objects;
 
     constructor(id) {
@@ -39,6 +40,7 @@ export default class Display {
         this._renderer = new THREE.WebGLRenderer({alpha: true});
         this._renderer.setSize(this._WIDTH, this._HEIGHT);
         this._canvas.appendChild(this._renderer.domElement);
+        this._texture_loader = new THREE.TextureLoader();
     }
 
     setupScene(scene) {

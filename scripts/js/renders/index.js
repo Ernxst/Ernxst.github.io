@@ -7,7 +7,9 @@ class IndexDisplay extends Display {
 
     setupScene(scene) {
         const geometry = new THREE.SphereGeometry(20, 64, 64);
-        const material = new THREE.MeshNormalMaterial();
+        const texture = this._texture_loader.load('assets/textures/Earth.jpg');
+
+        const material = new THREE.MeshBasicMaterial({map: texture});
         const sphere = new THREE.Mesh(geometry, material);
 
         sphere.scale.x = 0.1;

@@ -1,3 +1,4 @@
+// threejs.org/license
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -97,7 +98,7 @@
 
 	}
 
-	var REVISION = '120';
+	var REVISION = '121dev';
 	var MOUSE = { LEFT: 0, MIDDLE: 1, RIGHT: 2, ROTATE: 0, DOLLY: 1, PAN: 2 };
 	var TOUCH = { ROTATE: 0, PAN: 1, DOLLY_PAN: 2, DOLLY_ROTATE: 3 };
 	var CullFaceNone = 0;
@@ -3929,8 +3930,8 @@
 
 	};
 
-	var _vector = new Vector3();
-	var _quaternion = new Quaternion();
+	var _vector = /*@__PURE__*/ new Vector3();
+	var _quaternion = /*@__PURE__*/ new Quaternion();
 
 	var Box3 = function Box3( min, max ) {
 
@@ -4447,38 +4448,38 @@
 	}
 
 	var _points = [
-		new Vector3(),
-		new Vector3(),
-		new Vector3(),
-		new Vector3(),
-		new Vector3(),
-		new Vector3(),
-		new Vector3(),
-		new Vector3()
+		/*@__PURE__*/ new Vector3(),
+		/*@__PURE__*/ new Vector3(),
+		/*@__PURE__*/ new Vector3(),
+		/*@__PURE__*/ new Vector3(),
+		/*@__PURE__*/ new Vector3(),
+		/*@__PURE__*/ new Vector3(),
+		/*@__PURE__*/ new Vector3(),
+		/*@__PURE__*/ new Vector3()
 	];
 
-	var _vector$1 = new Vector3();
+	var _vector$1 = /*@__PURE__*/ new Vector3();
 
-	var _box = new Box3();
+	var _box = /*@__PURE__*/ new Box3();
 
 	// triangle centered vertices
 
-	var _v0 = new Vector3();
-	var _v1 = new Vector3();
-	var _v2 = new Vector3();
+	var _v0 = /*@__PURE__*/ new Vector3();
+	var _v1 = /*@__PURE__*/ new Vector3();
+	var _v2 = /*@__PURE__*/ new Vector3();
 
 	// triangle edge vectors
 
-	var _f0 = new Vector3();
-	var _f1 = new Vector3();
-	var _f2 = new Vector3();
+	var _f0 = /*@__PURE__*/ new Vector3();
+	var _f1 = /*@__PURE__*/ new Vector3();
+	var _f2 = /*@__PURE__*/ new Vector3();
 
-	var _center = new Vector3();
-	var _extents = new Vector3();
-	var _triangleNormal = new Vector3();
-	var _testAxis = new Vector3();
+	var _center = /*@__PURE__*/ new Vector3();
+	var _extents = /*@__PURE__*/ new Vector3();
+	var _triangleNormal = /*@__PURE__*/ new Vector3();
+	var _testAxis = /*@__PURE__*/ new Vector3();
 
-	var _box$1 = new Box3();
+	var _box$1 = /*@__PURE__*/ new Box3();
 
 	var Sphere = function Sphere( center, radius ) {
 
@@ -4657,14 +4658,14 @@
 
 	};
 
-	var _vector$2 = new Vector3();
-	var _segCenter = new Vector3();
-	var _segDir = new Vector3();
-	var _diff = new Vector3();
+	var _vector$2 = /*@__PURE__*/ new Vector3();
+	var _segCenter = /*@__PURE__*/ new Vector3();
+	var _segDir = /*@__PURE__*/ new Vector3();
+	var _diff = /*@__PURE__*/ new Vector3();
 
-	var _edge1 = new Vector3();
-	var _edge2 = new Vector3();
-	var _normal = new Vector3();
+	var _edge1 = /*@__PURE__*/ new Vector3();
+	var _edge2 = /*@__PURE__*/ new Vector3();
+	var _normal = /*@__PURE__*/ new Vector3();
 
 	var Ray = function Ray( origin, direction ) {
 
@@ -6025,13 +6026,13 @@
 
 	};
 
-	var _v1$1 = new Vector3();
-	var _m1 = new Matrix4();
-	var _zero = new Vector3( 0, 0, 0 );
-	var _one = new Vector3( 1, 1, 1 );
-	var _x = new Vector3();
-	var _y = new Vector3();
-	var _z = new Vector3();
+	var _v1$1 = /*@__PURE__*/ new Vector3();
+	var _m1 = /*@__PURE__*/ new Matrix4();
+	var _zero = /*@__PURE__*/ new Vector3( 0, 0, 0 );
+	var _one = /*@__PURE__*/ new Vector3( 1, 1, 1 );
+	var _x = /*@__PURE__*/ new Vector3();
+	var _y = /*@__PURE__*/ new Vector3();
+	var _z = /*@__PURE__*/ new Vector3();
 
 	var Euler = function Euler( x, y, z, order ) {
 		if ( x === void 0 ) x = 0;
@@ -6358,8 +6359,8 @@
 	Euler.DefaultOrder = 'XYZ';
 	Euler.RotationOrders = [ 'XYZ', 'YZX', 'ZXY', 'XZY', 'YXZ', 'ZYX' ];
 
-	var _matrix = new Matrix4();
-	var _quaternion$1 = new Quaternion();
+	var _matrix = /*@__PURE__*/ new Matrix4();
+	var _quaternion$1 = /*@__PURE__*/ new Quaternion();
 
 	var Layers = function Layers() {
 
@@ -6840,7 +6841,7 @@
 
 			}
 
-			this.updateMatrixWorld( true );
+			this.updateWorldMatrix( true, false );
 
 			return target.setFromMatrixPosition( this.matrixWorld );
 
@@ -6855,7 +6856,7 @@
 
 			}
 
-			this.updateMatrixWorld( true );
+			this.updateWorldMatrix( true, false );
 
 			this.matrixWorld.decompose( _position, target, _scale );
 
@@ -6872,7 +6873,7 @@
 
 			}
 
-			this.updateMatrixWorld( true );
+			this.updateWorldMatrix( true, false );
 
 			this.matrixWorld.decompose( _position, _quaternion$2, target );
 
@@ -6889,7 +6890,7 @@
 
 			}
 
-			this.updateMatrixWorld( true );
+			this.updateWorldMatrix( true, false );
 
 			var e = this.matrixWorld.elements;
 
@@ -7255,9 +7256,9 @@
 
 	} );
 
-	var _vector1 = new Vector3();
-	var _vector2 = new Vector3();
-	var _normalMatrix = new Matrix3();
+	var _vector1 = /*@__PURE__*/ new Vector3();
+	var _vector2 = /*@__PURE__*/ new Vector3();
+	var _normalMatrix = /*@__PURE__*/ new Matrix3();
 
 	var Plane = function Plane( normal, constant ) {
 
@@ -7473,17 +7474,17 @@
 
 	};
 
-	var _v0$1 = new Vector3();
-	var _v1$3 = new Vector3();
-	var _v2$1 = new Vector3();
-	var _v3 = new Vector3();
+	var _v0$1 = /*@__PURE__*/ new Vector3();
+	var _v1$3 = /*@__PURE__*/ new Vector3();
+	var _v2$1 = /*@__PURE__*/ new Vector3();
+	var _v3 = /*@__PURE__*/ new Vector3();
 
-	var _vab = new Vector3();
-	var _vac = new Vector3();
-	var _vbc = new Vector3();
-	var _vap = new Vector3();
-	var _vbp = new Vector3();
-	var _vcp = new Vector3();
+	var _vab = /*@__PURE__*/ new Vector3();
+	var _vac = /*@__PURE__*/ new Vector3();
+	var _vbc = /*@__PURE__*/ new Vector3();
+	var _vap = /*@__PURE__*/ new Vector3();
+	var _vbp = /*@__PURE__*/ new Vector3();
+	var _vcp = /*@__PURE__*/ new Vector3();
 
 	var Triangle = function Triangle( a, b, c ) {
 
@@ -13805,8 +13806,8 @@
 
 	DataTexture.prototype.isDataTexture = true;
 
-	var _sphere$1 = new Sphere();
-	var _vector$5 = new Vector3();
+	var _sphere$1 = /*@__PURE__*/ new Sphere();
+	var _vector$5 = /*@__PURE__*/ new Vector3();
 
 	var Frustum = function Frustum( p0, p1, p2, p3, p4, p5 ) {
 
@@ -14539,7 +14540,7 @@
 
 	var meshphong_vert = "#define PHONG\nvarying vec3 vViewPosition;\n#ifndef FLAT_SHADED\n\tvarying vec3 vNormal;\n#endif\n#include <common>\n#include <uv_pars_vertex>\n#include <uv2_pars_vertex>\n#include <displacementmap_pars_vertex>\n#include <envmap_pars_vertex>\n#include <color_pars_vertex>\n#include <fog_pars_vertex>\n#include <morphtarget_pars_vertex>\n#include <skinning_pars_vertex>\n#include <shadowmap_pars_vertex>\n#include <logdepthbuf_pars_vertex>\n#include <clipping_planes_pars_vertex>\nvoid main() {\n\t#include <uv_vertex>\n\t#include <uv2_vertex>\n\t#include <color_vertex>\n\t#include <beginnormal_vertex>\n\t#include <morphnormal_vertex>\n\t#include <skinbase_vertex>\n\t#include <skinnormal_vertex>\n\t#include <defaultnormal_vertex>\n#ifndef FLAT_SHADED\n\tvNormal = normalize( transformedNormal );\n#endif\n\t#include <begin_vertex>\n\t#include <morphtarget_vertex>\n\t#include <skinning_vertex>\n\t#include <displacementmap_vertex>\n\t#include <project_vertex>\n\t#include <logdepthbuf_vertex>\n\t#include <clipping_planes_vertex>\n\tvViewPosition = - mvPosition.xyz;\n\t#include <worldpos_vertex>\n\t#include <envmap_vertex>\n\t#include <shadowmap_vertex>\n\t#include <fog_vertex>\n}";
 
-	var meshphysical_frag = "#define STANDARD\n#ifdef PHYSICAL\n\t#define REFLECTIVITY\n\t#define CLEARCOAT\n\t#define TRANSMISSION\n#endif\nuniform vec3 diffuse;\nuniform vec3 emissive;\nuniform float roughness;\nuniform float metalness;\nuniform float opacity;\n#ifdef TRANSMISSION\n\tuniform float transmission;\n#endif\n#ifdef REFLECTIVITY\n\tuniform float reflectivity;\n#endif\n#ifdef CLEARCOAT\n\tuniform float clearcoat;\n\tuniform float clearcoatRoughness;\n#endif\n#ifdef USE_SHEEN\n\tuniform vec3 sheen;\n#endif\nvarying vec3 vViewPosition;\n#ifndef FLAT_SHADED\n\tvarying vec3 vNormal;\n\t#ifdef USE_TANGENT\n\t\tvarying vec3 vTangent;\n\t\tvarying vec3 vBitangent;\n\t#endif\n#endif\n#include <common>\n#include <packing>\n#include <dithering_pars_fragment>\n#include <color_pars_fragment>\n#include <uv_pars_fragment>\n#include <uv2_pars_fragment>\n#include <map_pars_fragment>\n#include <alphamap_pars_fragment>\n#include <aomap_pars_fragment>\n#include <lightmap_pars_fragment>\n#include <emissivemap_pars_fragment>\n#include <transmissionmap_pars_fragment>\n#include <bsdfs>\n#include <cube_uv_reflection_fragment>\n#include <envmap_common_pars_fragment>\n#include <envmap_physical_pars_fragment>\n#include <fog_pars_fragment>\n#include <lights_pars_begin>\n#include <lights_physical_pars_fragment>\n#include <shadowmap_pars_fragment>\n#include <bumpmap_pars_fragment>\n#include <normalmap_pars_fragment>\n#include <clearcoat_pars_fragment>\n#include <roughnessmap_pars_fragment>\n#include <metalnessmap_pars_fragment>\n#include <logdepthbuf_pars_fragment>\n#include <clipping_planes_pars_fragment>\nvoid main() {\n\t#include <clipping_planes_fragment>\n\tvec4 diffuseColor = vec4( diffuse, opacity );\n\tReflectedLight reflectedLight = ReflectedLight( vec3( 0.0 ), vec3( 0.0 ), vec3( 0.0 ), vec3( 0.0 ) );\n\tvec3 totalEmissiveRadiance = emissive;\n\t#ifdef TRANSMISSION\n\t\tfloat totalTransmission = transmission;\n\t#endif\n\t#include <logdepthbuf_fragment>\n\t#include <map_fragment>\n\t#include <color_fragment>\n\t#include <alphamap_fragment>\n\t#include <alphatest_fragment>\n\t#include <roughnessmap_fragment>\n\t#include <metalnessmap_fragment>\n\t#include <normal_fragment_begin>\n\t#include <normal_fragment_maps>\n\t#include <clearcoat_normal_fragment_begin>\n\t#include <clearcoat_normal_fragment_maps>\n\t#include <emissivemap_fragment>\n\t#include <transmissionmap_fragment>\n\t#include <lights_physical_fragment>\n\t#include <lights_fragment_begin>\n\t#include <lights_fragment_maps>\n\t#include <lights_fragment_end>\n\t#include <aomap_fragment>\n\tvec3 outgoingLight = reflectedLight.directDiffuse + reflectedLight.indirectDiffuse + reflectedLight.directSpecular + reflectedLight.indirectSpecular + totalEmissiveRadiance;\n\t#ifdef TRANSMISSION\n\t\tdiffuseColor.a *= saturate( 1. - totalTransmission + linearToRelativeLuminance( reflectedLight.directSpecular + reflectedLight.indirectSpecular ) );\n\t#endif\n\tgl_FragColor = vec4( outgoingLight, diffuseColor.a );\n\t#include <tonemapping_fragment>\n\t#include <encodings_fragment>\n\t#include <fog_fragment>\n\t#include <premultiplied_alpha_fragment>\n\t#include <dithering_fragment>\n}";
+	var meshphysical_frag = "#define STANDARD\n#ifdef PHYSICAL\n\t#define REFLECTIVITY\n\t#define CLEARCOAT\n\t#define TRANSMISSION\n#endif\nuniform vec3 diffuse;\nuniform vec3 emissive;\nuniform float roughness;\nuniform float metalness;\nuniform float opacity;\n#ifdef TRANSMISSION\n\tuniform float transmission;\n#endif\n#ifdef REFLECTIVITY\n\tuniform float reflectivity;\n#endif\n#ifdef CLEARCOAT\n\tuniform float clearcoat;\n\tuniform float clearcoatRoughness;\n#endif\n#ifdef USE_SHEEN\n\tuniform vec3 sheen;\n#endif\nvarying vec3 vViewPosition;\n#ifndef FLAT_SHADED\n\tvarying vec3 vNormal;\n\t#ifdef USE_TANGENT\n\t\tvarying vec3 vTangent;\n\t\tvarying vec3 vBitangent;\n\t#endif\n#endif\n#include <common>\n#include <packing>\n#include <dithering_pars_fragment>\n#include <color_pars_fragment>\n#include <uv_pars_fragment>\n#include <uv2_pars_fragment>\n#include <map_pars_fragment>\n#include <alphamap_pars_fragment>\n#include <aomap_pars_fragment>\n#include <lightmap_pars_fragment>\n#include <emissivemap_pars_fragment>\n#include <transmissionmap_pars_fragment>\n#include <bsdfs>\n#include <cube_uv_reflection_fragment>\n#include <envmap_common_pars_fragment>\n#include <envmap_physical_pars_fragment>\n#include <fog_pars_fragment>\n#include <lights_pars_begin>\n#include <lights_physical_pars_fragment>\n#include <shadowmap_pars_fragment>\n#include <bumpmap_pars_fragment>\n#include <normalmap_pars_fragment>\n#include <clearcoat_pars_fragment>\n#include <roughnessmap_pars_fragment>\n#include <metalnessmap_pars_fragment>\n#include <logdepthbuf_pars_fragment>\n#include <clipping_planes_pars_fragment>\nvoid main() {\n\t#include <clipping_planes_fragment>\n\tvec4 diffuseColor = vec4( diffuse, opacity );\n\tReflectedLight reflectedLight = ReflectedLight( vec3( 0.0 ), vec3( 0.0 ), vec3( 0.0 ), vec3( 0.0 ) );\n\tvec3 totalEmissiveRadiance = emissive;\n\t#ifdef TRANSMISSION\n\t\tfloat totalTransmission = transmission;\n\t#endif\n\t#include <logdepthbuf_fragment>\n\t#include <map_fragment>\n\t#include <color_fragment>\n\t#include <alphamap_fragment>\n\t#include <alphatest_fragment>\n\t#include <roughnessmap_fragment>\n\t#include <metalnessmap_fragment>\n\t#include <normal_fragment_begin>\n\t#include <normal_fragment_maps>\n\t#include <clearcoat_normal_fragment_begin>\n\t#include <clearcoat_normal_fragment_maps>\n\t#include <emissivemap_fragment>\n\t#include <transmissionmap_fragment>\n\t#include <lights_physical_fragment>\n\t#include <lights_fragment_begin>\n\t#include <lights_fragment_maps>\n\t#include <lights_fragment_end>\n\t#include <aomap_fragment>\n\tvec3 outgoingLight = reflectedLight.directDiffuse + reflectedLight.indirectDiffuse + reflectedLight.directSpecular + reflectedLight.indirectSpecular + totalEmissiveRadiance;\n\t#ifdef TRANSMISSION\n\t\tdiffuseColor.a *= mix( saturate( 1. - totalTransmission + linearToRelativeLuminance( reflectedLight.directSpecular + reflectedLight.indirectSpecular ) ), 1.0, metalness );\n\t#endif\n\tgl_FragColor = vec4( outgoingLight, diffuseColor.a );\n\t#include <tonemapping_fragment>\n\t#include <encodings_fragment>\n\t#include <fog_fragment>\n\t#include <premultiplied_alpha_fragment>\n\t#include <dithering_fragment>\n}";
 
 	var meshphysical_vert = "#define STANDARD\nvarying vec3 vViewPosition;\n#ifndef FLAT_SHADED\n\tvarying vec3 vNormal;\n\t#ifdef USE_TANGENT\n\t\tvarying vec3 vTangent;\n\t\tvarying vec3 vBitangent;\n\t#endif\n#endif\n#include <common>\n#include <uv_pars_vertex>\n#include <uv2_pars_vertex>\n#include <displacementmap_pars_vertex>\n#include <color_pars_vertex>\n#include <fog_pars_vertex>\n#include <morphtarget_pars_vertex>\n#include <skinning_pars_vertex>\n#include <shadowmap_pars_vertex>\n#include <logdepthbuf_pars_vertex>\n#include <clipping_planes_pars_vertex>\nvoid main() {\n\t#include <uv_vertex>\n\t#include <uv2_vertex>\n\t#include <color_vertex>\n\t#include <beginnormal_vertex>\n\t#include <morphnormal_vertex>\n\t#include <skinbase_vertex>\n\t#include <skinnormal_vertex>\n\t#include <defaultnormal_vertex>\n#ifndef FLAT_SHADED\n\tvNormal = normalize( transformedNormal );\n\t#ifdef USE_TANGENT\n\t\tvTangent = normalize( transformedTangent );\n\t\tvBitangent = normalize( cross( vNormal, vTangent ) * tangent.w );\n\t#endif\n#endif\n\t#include <begin_vertex>\n\t#include <morphtarget_vertex>\n\t#include <skinning_vertex>\n\t#include <displacementmap_vertex>\n\t#include <project_vertex>\n\t#include <logdepthbuf_vertex>\n\t#include <clipping_planes_vertex>\n\tvViewPosition = - mvPosition.xyz;\n\t#include <worldpos_vertex>\n\t#include <shadowmap_vertex>\n\t#include <fog_vertex>\n}";
 
@@ -20324,14 +20325,14 @@
 				var light = lights[ i ];
 				var shadow = light.shadow;
 
-				if ( shadow.autoUpdate === false && shadow.needsUpdate === false ) { continue; }
-
 				if ( shadow === undefined ) {
 
 					console.warn( 'THREE.WebGLShadowMap:', light, 'has no shadow.' );
 					continue;
 
 				}
+
+				if ( shadow.autoUpdate === false && shadow.needsUpdate === false ) { continue; }
 
 				_shadowMapSize.copy( shadow.mapSize );
 
@@ -29090,7 +29091,7 @@
 
 			function subdivideFace( a, b, c, detail ) {
 
-				var cols = Math.pow( 2, detail );
+				var cols = detail + 1;
 
 				// we use this multidimensional array as a data structure for creating the subdivision
 
@@ -32476,7 +32477,12 @@
 
 	}
 
-	function EdgesGeometry( geometry, thresholdAngle ) {
+	var _v0$2 = new Vector3();
+	var _v1$5 = new Vector3();
+	var _normal$1 = new Vector3();
+	var _triangle = new Triangle();
+
+		function EdgesGeometry( geometry, thresholdAngle ) {
 
 			BufferGeometry.call(this);
 
@@ -32488,60 +32494,98 @@
 
 			thresholdAngle = ( thresholdAngle !== undefined ) ? thresholdAngle : 1;
 
-			// buffer
+			if ( geometry.isGeometry ) {
 
-			var vertices = [];
-
-			// helper variables
-
-			var thresholdDot = Math.cos( MathUtils.DEG2RAD * thresholdAngle );
-			var edge = [ 0, 0 ], edges = {};
-			var edge1, edge2, key;
-			var keys = [ 'a', 'b', 'c' ];
-
-			// prepare source geometry
-
-			var geometry2;
-
-			if ( geometry.isBufferGeometry ) {
-
-				geometry2 = new Geometry();
-				geometry2.fromBufferGeometry( geometry );
-
-			} else {
-
-				geometry2 = geometry.clone();
+				geometry = new BufferGeometry().fromGeometry( geometry );
 
 			}
 
-			geometry2.mergeVertices();
-			geometry2.computeFaceNormals();
+			var precisionPoints = 4;
+			var precision = Math.pow( 10, precisionPoints );
+			var thresholdDot = Math.cos( MathUtils.DEG2RAD * thresholdAngle );
 
-			var sourceVertices = geometry2.vertices;
-			var faces = geometry2.faces;
+			var indexAttr = geometry.getIndex();
+			var positionAttr = geometry.getAttribute( 'position' );
+			var indexCount = indexAttr ? indexAttr.count : positionAttr.count;
 
-			// now create a data structure where each entry represents an edge with its adjoining faces
+			var indexArr = [ 0, 0, 0 ];
+			var vertKeys = [ 'a', 'b', 'c' ];
+			var hashes = new Array( 3 );
 
-			for ( var i = 0, l = faces.length; i < l; i ++ ) {
+			var edgeData = {};
+			var vertices = [];
+			for ( var i = 0; i < indexCount; i += 3 ) {
 
-				var face = faces[ i ];
+				if ( indexAttr ) {
 
+					indexArr[ 0 ] = indexAttr.getX( i );
+					indexArr[ 1 ] = indexAttr.getX( i + 1 );
+					indexArr[ 2 ] = indexAttr.getX( i + 2 );
+
+				} else {
+
+					indexArr[ 0 ] = i;
+					indexArr[ 1 ] = i + 1;
+					indexArr[ 2 ] = i + 2;
+
+				}
+
+				var a = _triangle.a;
+				var b = _triangle.b;
+				var c = _triangle.c;
+				a.fromBufferAttribute( positionAttr, indexArr[ 0 ] );
+				b.fromBufferAttribute( positionAttr, indexArr[ 1 ] );
+				c.fromBufferAttribute( positionAttr, indexArr[ 2 ] );
+				_triangle.getNormal( _normal$1 );
+
+				// create hashes for the edge from the vertices
+				hashes[ 0 ] = (Math.round( a.x * precision )) + "," + (Math.round( a.y * precision )) + "," + (Math.round( a.z * precision ));
+				hashes[ 1 ] = (Math.round( b.x * precision )) + "," + (Math.round( b.y * precision )) + "," + (Math.round( b.z * precision ));
+				hashes[ 2 ] = (Math.round( c.x * precision )) + "," + (Math.round( c.y * precision )) + "," + (Math.round( c.z * precision ));
+
+				// skip degenerate triangles
+				if ( hashes[ 0 ] === hashes[ 1 ] || hashes[ 1 ] === hashes[ 2 ] || hashes[ 2 ] === hashes[ 0 ] ) {
+
+					continue;
+
+				}
+
+				// iterate over every edge
 				for ( var j = 0; j < 3; j ++ ) {
 
-					edge1 = face[ keys[ j ] ];
-					edge2 = face[ keys[ ( j + 1 ) % 3 ] ];
-					edge[ 0 ] = Math.min( edge1, edge2 );
-					edge[ 1 ] = Math.max( edge1, edge2 );
+					// get the first and next vertex making up the edge
+					var jNext = ( j + 1 ) % 3;
+					var vecHash0 = hashes[ j ];
+					var vecHash1 = hashes[ jNext ];
+					var v0 = _triangle[ vertKeys[ j ] ];
+					var v1 = _triangle[ vertKeys[ jNext ] ];
 
-					key = edge[ 0 ] + ',' + edge[ 1 ];
+					var hash = vecHash0 + "_" + vecHash1;
+					var reverseHash = vecHash1 + "_" + vecHash0;
 
-					if ( edges[ key ] === undefined ) {
+					if ( reverseHash in edgeData && edgeData[ reverseHash ] ) {
 
-						edges[ key ] = { index1: edge[ 0 ], index2: edge[ 1 ], face1: i, face2: undefined };
+						// if we found a sibling edge add it into the vertex array if
+						// it meets the angle threshold and delete the edge from the map.
+						if ( _normal$1.dot( edgeData[ reverseHash ].normal ) <= thresholdDot ) {
 
-					} else {
+							vertices.push( v0.x, v0.y, v0.z );
+							vertices.push( v1.x, v1.y, v1.z );
 
-						edges[ key ].face2 = i;
+						}
+
+						edgeData[ reverseHash ] = null;
+
+					} else if ( ! ( hash in edgeData ) ) {
+
+						// if we've already got an edge here then skip adding a new one
+						edgeData[ hash ] = {
+
+							index0: indexArr[ j ],
+							index1: indexArr[ jNext ],
+							normal: _normal$1.clone(),
+
+						};
 
 					}
 
@@ -32549,27 +32593,23 @@
 
 			}
 
-			// generate vertices
+			// iterate over all remaining, unmatched edges and add them to the vertex array
+			for ( var key in edgeData ) {
 
-			for ( key in edges ) {
+				if ( edgeData[ key ] ) {
 
-				var e = edges[ key ];
+					var ref = edgeData[ key ];
+					var index0 = ref.index0;
+					var index1 = ref.index1;
+					_v0$2.fromBufferAttribute( positionAttr, index0 );
+					_v1$5.fromBufferAttribute( positionAttr, index1 );
 
-				// an edge is only rendered if the angle (in degrees) between the face normals of the adjoining faces exceeds this value. default = 1 degree.
-
-				if ( e.face2 === undefined || faces[ e.face1 ].normal.dot( faces[ e.face2 ].normal ) <= thresholdDot ) {
-
-					var vertex = sourceVertices[ e.index1 ];
-					vertices.push( vertex.x, vertex.y, vertex.z );
-
-					vertex = sourceVertices[ e.index2 ];
-					vertices.push( vertex.x, vertex.y, vertex.z );
+					vertices.push( _v0$2.x, _v0$2.y, _v0$2.z );
+					vertices.push( _v1$5.x, _v1$5.y, _v1$5.z );
 
 				}
 
 			}
-
-			// build geometry
 
 			this.setAttribute( 'position', new Float32BufferAttribute( vertices, 3 ) );
 
@@ -38977,8 +39017,6 @@
 		this.color = new Color( color );
 		this.intensity = intensity !== undefined ? intensity : 1;
 
-		this.receiveShadow = undefined;
-
 	}
 
 	Light.prototype = Object.assign( Object.create( Object3D.prototype ), {
@@ -39025,8 +39063,6 @@
 		Light.call( this, skyColor, intensity );
 
 		this.type = 'HemisphereLight';
-
-		this.castShadow = undefined;
 
 		this.position.copy( Object3D.DefaultUp );
 		this.updateMatrix();
@@ -39186,6 +39222,8 @@
 
 		LightShadow.call( this, new PerspectiveCamera( 50, 1, 0.5, 500 ) );
 
+		this.focus = 1;
+
 	}
 
 	SpotLightShadow.prototype = Object.assign( Object.create( LightShadow.prototype ), {
@@ -39198,7 +39236,7 @@
 
 			var camera = this.camera;
 
-			var fov = MathUtils.RAD2DEG * 2 * light.angle;
+			var fov = MathUtils.RAD2DEG * 2 * light.angle * this.focus;
 			var aspect = this.mapSize.width / this.mapSize.height;
 			var far = light.distance || camera.far;
 
@@ -39607,8 +39645,6 @@
 		Light.call( this, color, intensity );
 
 		this.type = 'AmbientLight';
-
-		this.castShadow = undefined;
 
 	}
 
@@ -40593,15 +40629,14 @@
 
 	function ObjectLoader( manager ) {
 
-		Loader.call( this, manager );
+			Loader.call( this, manager );
 
-	}
+		}
 
-	ObjectLoader.prototype = Object.assign( Object.create( Loader.prototype ), {
+		ObjectLoader.prototype = Object.create( Loader.prototype );
+		ObjectLoader.prototype.constructor = ObjectLoader;
 
-		constructor: ObjectLoader,
-
-		load: function ( url, onLoad, onProgress, onError ) {
+		ObjectLoader.prototype.load = function load ( url, onLoad, onProgress, onError ) {
 
 			var scope = this;
 
@@ -40642,9 +40677,9 @@
 
 			}, onProgress, onError );
 
-		},
+		};
 
-		parse: function ( json, onLoad ) {
+		ObjectLoader.prototype.parse = function parse ( json, onLoad ) {
 
 			var shapes = this.parseShape( json.shapes );
 			var geometries = this.parseGeometries( json.geometries, shapes );
@@ -40674,9 +40709,9 @@
 
 			return object;
 
-		},
+		};
 
-		parseShape: function ( json ) {
+		ObjectLoader.prototype.parseShape = function parseShape ( json ) {
 
 			var shapes = {};
 
@@ -40694,9 +40729,9 @@
 
 			return shapes;
 
-		},
+		};
 
-		parseGeometries: function ( json, shapes ) {
+		ObjectLoader.prototype.parseGeometries = function parseGeometries ( json, shapes ) {
 
 			var geometries = {};
 			var geometryShapes;
@@ -40976,9 +41011,9 @@
 
 			return geometries;
 
-		},
+		};
 
-		parseMaterials: function ( json, textures ) {
+		ObjectLoader.prototype.parseMaterials = function parseMaterials ( json, textures ) {
 
 			var cache = {}; // MultiMaterial
 			var materials = {};
@@ -41032,9 +41067,9 @@
 
 			return materials;
 
-		},
+		};
 
-		parseAnimations: function ( json ) {
+		ObjectLoader.prototype.parseAnimations = function parseAnimations ( json ) {
 
 			var animations = [];
 
@@ -41052,9 +41087,9 @@
 
 			return animations;
 
-		},
+		};
 
-		parseImages: function ( json, onLoad ) {
+		ObjectLoader.prototype.parseImages = function parseImages ( json, onLoad ) {
 
 			var scope = this;
 			var images = {};
@@ -41122,9 +41157,9 @@
 
 			return images;
 
-		},
+		};
 
-		parseTextures: function ( json, images ) {
+		ObjectLoader.prototype.parseTextures = function parseTextures ( json, images ) {
 
 			function parseConstant( value, type ) {
 
@@ -41209,9 +41244,9 @@
 
 			return textures;
 
-		},
+		};
 
-		parseObject: function ( data, geometries, materials ) {
+		ObjectLoader.prototype.parseObject = function parseObject ( data, geometries, materials ) {
 
 			var object;
 
@@ -41508,9 +41543,16 @@
 
 			return object;
 
-		}
+		};
 
-	} );
+		/* DEPRECATED */
+
+		ObjectLoader.prototype.setTexturePath = function setTexturePath ( value ) {
+
+			console.warn( 'THREE.ObjectLoader: .setTexturePath() has been renamed to .setResourcePath().' );
+			return this.setResourcePath( value );
+
+		};
 
 	var TEXTURE_MAPPING = {
 		UVMapping: UVMapping,
@@ -41599,7 +41641,10 @@
 
 			}
 
-			fetch( url ).then( function ( res ) {
+			var fetchOptions = {};
+			fetchOptions.credentials = ( this.crossOrigin === 'anonymous' ) ? 'same-origin' : 'include';
+
+			fetch( url, fetchOptions ).then( function ( res ) {
 
 				return res.blob();
 
@@ -42426,10 +42471,10 @@
 
 	};
 
-	var _position$2 = new Vector3();
-	var _quaternion$3 = new Quaternion();
-	var _scale$1 = new Vector3();
-	var _orientation = new Vector3();
+	var _position$2 = /*@__PURE__*/ new Vector3();
+	var _quaternion$3 = /*@__PURE__*/ new Quaternion();
+	var _scale$1 = /*@__PURE__*/ new Vector3();
+	var _orientation = /*@__PURE__*/ new Vector3();
 
 		function AudioListener() {
 
@@ -42944,10 +42989,10 @@
 
 		};
 
-	var _position$3 = new Vector3();
-	var _quaternion$4 = new Quaternion();
-	var _scale$2 = new Vector3();
-	var _orientation$1 = new Vector3();
+	var _position$3 = /*@__PURE__*/ new Vector3();
+	var _quaternion$4 = /*@__PURE__*/ new Quaternion();
+	var _scale$2 = /*@__PURE__*/ new Vector3();
+	var _orientation$1 = /*@__PURE__*/ new Vector3();
 
 		function PositionalAudio( listener ) {
 
@@ -45994,20 +46039,6 @@
 
 	} );
 
-	/**
-	 * @author raub / https://github.com/raub
-	 */
-
-	/**
-	 * Element size is one of:
-	 * 5126: 4
-	 * 5123: 2
-	 * 5122: 2
-	 * 5125: 4
-	 * 5124: 4
-	 * 5120: 1
-	 * 5121: 1
-	 */
 	function GLBufferAttribute( buffer, type, itemSize, elementSize, count ) {
 
 		this.buffer = buffer;
@@ -46336,7 +46367,7 @@
 
 	};
 
-	var _vector$7 = new Vector2();
+	var _vector$7 = /*@__PURE__*/ new Vector2();
 
 	var Box2 = function Box2( min, max ) {
 
@@ -46560,8 +46591,8 @@
 
 	};
 
-	var _startP = new Vector3();
-	var _startEnd = new Vector3();
+	var _startP = /*@__PURE__*/ new Vector3();
+	var _startEnd = /*@__PURE__*/ new Vector3();
 
 	var Line3 = function Line3( start, end ) {
 
@@ -46721,7 +46752,7 @@
 
 	ImmediateRenderObject.prototype.isImmediateRenderObject = true;
 
-	var _vector$8 = new Vector3();
+	var _vector$8 = /*@__PURE__*/ new Vector3();
 
 		function SpotLightHelper( light, color ) {
 
@@ -46802,9 +46833,9 @@
 
 		};
 
-	var _vector$9 = new Vector3();
-	var _boneMatrix = new Matrix4();
-	var _matrixWorldInv = new Matrix4();
+	var _vector$9 = /*@__PURE__*/ new Vector3();
+	var _boneMatrix = /*@__PURE__*/ new Matrix4();
+	var _matrixWorldInv = /*@__PURE__*/ new Matrix4();
 
 
 		function SkeletonHelper( object ) {
@@ -46995,9 +47026,9 @@
 
 		};
 
-	var _vector$a = new Vector3();
-	var _color1 = new Color();
-	var _color2 = new Color();
+	var _vector$a = /*@__PURE__*/ new Vector3();
+	var _color1 = /*@__PURE__*/ new Color();
+	var _color2 = /*@__PURE__*/ new Color();
 
 		function HemisphereLightHelper( light, size, color ) {
 
@@ -47190,9 +47221,9 @@
 		PolarGridHelper.prototype = Object.create( LineSegments.prototype );
 		PolarGridHelper.prototype.constructor = PolarGridHelper;
 
-	var _v1$5 = new Vector3();
-	var _v2$3 = new Vector3();
-	var _v3$1 = new Vector3();
+	var _v1$6 = /*@__PURE__*/ new Vector3();
+	var _v2$3 = /*@__PURE__*/ new Vector3();
+	var _v3$1 = /*@__PURE__*/ new Vector3();
 
 		function DirectionalLightHelper( light, size, color ) {
 
@@ -47245,9 +47276,9 @@
 
 		DirectionalLightHelper.prototype.update = function update () {
 
-			_v1$5.setFromMatrixPosition( this.light.matrixWorld );
+			_v1$6.setFromMatrixPosition( this.light.matrixWorld );
 			_v2$3.setFromMatrixPosition( this.light.target.matrixWorld );
-			_v3$1.subVectors( _v2$3, _v1$5 );
+			_v3$1.subVectors( _v2$3, _v1$6 );
 
 			this.lightPlane.lookAt( _v2$3 );
 
@@ -47268,8 +47299,8 @@
 
 		};
 
-	var _vector$b = new Vector3();
-	var _camera = new Camera();
+	var _vector$b = /*@__PURE__*/ new Vector3();
+	var _camera = /*@__PURE__*/ new Camera();
 
 	/**
 	 *	- shows frustum, line of sight and up of the camera
@@ -47461,7 +47492,7 @@
 
 	}
 
-	var _box$3 = new Box3();
+	var _box$3 = /*@__PURE__*/ new Box3();
 
 		function BoxHelper( object, color ) {
 			if ( color === void 0 ) color = 0xffff00;
@@ -47651,7 +47682,7 @@
 
 		};
 
-	var _axis = new Vector3();
+	var _axis = /*@__PURE__*/ new Vector3();
 	var _lineGeometry, _coneGeometry;
 
 		function ArrowHelper( dir, origin, length, color, headLength, headWidth ) {
@@ -47808,8 +47839,8 @@
 	ENCODINGS[ RGBDEncoding ] = 5;
 	ENCODINGS[ GammaEncoding ] = 6;
 
-	var _flatCamera = new OrthographicCamera();
-	var ref = _createPlanes();
+	var _flatCamera = /*@__PURE__*/ new OrthographicCamera();
+	var ref = /*@__PURE__*/ _createPlanes();
 	var _lodPlanes = ref._lodPlanes;
 	var _sizeLods = ref._sizeLods;
 	var _sigmas = ref._sigmas;
@@ -47822,16 +47853,16 @@
 	// Vertices of a dodecahedron (except the opposites, which represent the
 	// same axis), used as axis directions evenly spread on a sphere.
 	var _axisDirections = [
-		new Vector3( 1, 1, 1 ),
-		new Vector3( - 1, 1, 1 ),
-		new Vector3( 1, 1, - 1 ),
-		new Vector3( - 1, 1, - 1 ),
-		new Vector3( 0, PHI, INV_PHI ),
-		new Vector3( 0, PHI, - INV_PHI ),
-		new Vector3( INV_PHI, 0, PHI ),
-		new Vector3( - INV_PHI, 0, PHI ),
-		new Vector3( PHI, INV_PHI, 0 ),
-		new Vector3( - PHI, INV_PHI, 0 ) ];
+		/*@__PURE__*/ new Vector3( 1, 1, 1 ),
+		/*@__PURE__*/ new Vector3( - 1, 1, 1 ),
+		/*@__PURE__*/ new Vector3( 1, 1, - 1 ),
+		/*@__PURE__*/ new Vector3( - 1, 1, - 1 ),
+		/*@__PURE__*/ new Vector3( 0, PHI, INV_PHI ),
+		/*@__PURE__*/ new Vector3( 0, PHI, - INV_PHI ),
+		/*@__PURE__*/ new Vector3( INV_PHI, 0, PHI ),
+		/*@__PURE__*/ new Vector3( - INV_PHI, 0, PHI ),
+		/*@__PURE__*/ new Vector3( PHI, INV_PHI, 0 ),
+		/*@__PURE__*/ new Vector3( - PHI, INV_PHI, 0 ) ];
 
 	/**
 	 * This class generates a Prefiltered, Mipmapped Radiance Environment Map
@@ -48830,17 +48861,6 @@
 		return new DataTextureLoader( manager );
 
 	}
-
-	Object.assign( ObjectLoader.prototype, {
-
-		setTexturePath: function ( value ) {
-
-			console.warn( 'THREE.ObjectLoader: .setTexturePath() has been renamed to .setResourcePath().' );
-			return this.setResourcePath( value );
-
-		}
-
-	} );
 
 	//
 
@@ -50801,7 +50821,6 @@
 	exports.LessStencilFunc = LessStencilFunc;
 	exports.Light = Light;
 	exports.LightProbe = LightProbe;
-	exports.LightShadow = LightShadow;
 	exports.Line = Line;
 	exports.Line3 = Line3;
 	exports.LineBasicMaterial = LineBasicMaterial;

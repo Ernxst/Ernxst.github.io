@@ -3,7 +3,6 @@ export default class Display {
     _canvas;
     _WIDTH;
     _HEIGHT;
-    _ASPECT;
     _scene;
     _camera;
     _renderer;
@@ -15,28 +14,30 @@ export default class Display {
         this._canvas = document.getElementById(id);
         this._WIDTH = this._canvas.clientWidth;
         this._HEIGHT = this._canvas.clientHeight;
-        this._ASPECT = this._WIDTH / this._HEIGHT;
 
+        setInterval(this._resize.bind(this), 250);
         this._setupRender();
         this._objects = this.setupScene(this._scene)
         this.setupCamera()
-
-        this._canvas.onresize = this._resize
     }
 
     _resize() {
-        this._WIDTH = this._canvas.clientWidth
-        this._HEIGHT = this._canvas.clientHeight
-        this._ASPECT = this._WIDTH / this._HEIGHT
+        let width = this._canvas.clientWidth;
+        let height = this._canvas.clientHeight;
 
-        this._renderer.setSize(this._WIDTH, this._HEIGHT);
-        this._camera.aspect = this._ASPECT;
-        this._camera.updateProjectionMatrix();
+        if (width !== this._WIDTH || height !== this._HEIGHT) {
+            this._WIDTH = width;
+            this._HEIGHT = height;
+
+            this._renderer.setSize(this._WIDTH, this._HEIGHT);
+            this._camera.aspect = this._WIDTH / this._HEIGHT;
+            this._camera.updateProjectionMatrix();
+        }
     }
 
     _setupRender() {
         this._scene = new THREE.Scene();
-        this._camera = new THREE.PerspectiveCamera(75, this._ASPECT, 0.1, 10000);
+        this._camera = new THREE.PerspectiveCamera(90, this._WIDTH / this._HEIGHT, 0.1, 10000);
         this._renderer = new THREE.WebGLRenderer({alpha: true});
         this._renderer.setSize(this._WIDTH, this._HEIGHT);
         this._canvas.appendChild(this._renderer.domElement);
@@ -53,8 +54,8 @@ export default class Display {
 
     _animate() {
         requestAnimationFrame(this._animate.bind(this));
-        this.render()
-        this._renderer.render(this._scene, this._camera)
+        this.render();
+        this._renderer.render(this._scene, this._camera);
     }
 
     render() {

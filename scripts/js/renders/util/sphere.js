@@ -73,7 +73,7 @@ export default class Sphere extends Object {
 
     _createShell(shell) {
         return new THREE.Mesh(
-            new THREE.SphereGeometry(this.radius * 1.03, this.SLICES, this.SLICES),
+            new THREE.SphereGeometry(this.radius * 1.02, this.SLICES, this.SLICES),
             new THREE.MeshPhongMaterial({
                 map: this._textureLoader.load(shell),
                 opacity: 0.8,
@@ -83,7 +83,7 @@ export default class Sphere extends Object {
     }
 
     _createGlow(camera, colour, intensity, fade) {
-        let geometry = new THREE.SphereGeometry(1.04, this.SLICES, this.SLICES);
+        let geometry = new THREE.SphereGeometry(1.01, this.SLICES, this.SLICES);
 
         let glowMaterial = new THREE.ShaderMaterial({
             uniforms: {

@@ -25,7 +25,7 @@ export default class Display {
         let width = this._canvas.clientWidth;
         let height = this._canvas.clientHeight;
 
-        if (width !== this._WIDTH || height !== this._HEIGHT) {
+        if (width !== this._WIDTH || ! (height - 4 <= this._HEIGHT <= height + 4)) {
             this._WIDTH = width;
             this._HEIGHT = height;
 

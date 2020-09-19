@@ -83,7 +83,7 @@ export default class Sphere extends Object {
     }
 
     _createGlow(camera, colour, intensity, fade) {
-        let geometry = new THREE.SphereGeometry(1.01, this.SLICES, this.SLICES);
+        let geometry = new THREE.SphereGeometry(1.03, this.SLICES, this.SLICES);
 
         let glowMaterial = new THREE.ShaderMaterial({
             uniforms: {

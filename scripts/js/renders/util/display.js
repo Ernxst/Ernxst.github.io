@@ -5,6 +5,7 @@ export default class Display {
     _HEIGHT;
     _scene;
     _camera;
+    _controls;
     _renderer;
     _texture_loader;
     _objects;
@@ -39,9 +40,11 @@ export default class Display {
         this._scene = new THREE.Scene();
         this._camera = new THREE.PerspectiveCamera(45, this._WIDTH / this._HEIGHT, 0.1, 1500);
         this._renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
+        this._renderer.setClearColor(0xFFFFFF, 0.0); // YAY!
         this._renderer.setSize(this._WIDTH, this._HEIGHT);
         this._canvas.appendChild(this._renderer.domElement);
         this._texture_loader = new THREE.TextureLoader();
+        this._controls = new THREE.OrbitControls( this._camera, this._renderer.domElement );
     }
 
     setupScene(scene) {
@@ -55,6 +58,7 @@ export default class Display {
     _animate() {
         requestAnimationFrame(this._animate.bind(this));
         this.render();
+        this._controls.update()
         this._renderer.render(this._scene, this._camera);
     }
 

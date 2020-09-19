@@ -11,7 +11,8 @@ class IndexDisplay extends Display {
             'assets/textures/Earth.jpg', 'assets/textures/earth_bump_map.jpg',
             'assets/textures/earth_specular_map.png',
             'assets/textures/EarthShell.png', this._texture_loader, 0x93cfef);
-        this.setupLighting()
+        this.setupLighting();
+        this.setupControls();
         return [sphere];
     }
 
@@ -19,6 +20,13 @@ class IndexDisplay extends Display {
         let light = new THREE.SpotLight(0xffffff, 2, 0, 5, 1);
         light.position.set(2, 2, 2);
         this._scene.add(light);
+    }
+
+    setupControls() {
+        this._controls.minDistance = 3;
+        this._controls.maxDistance = 20;
+        this._controls.target = new THREE.Vector3(0, 0, 0);
+        this._controls.enablePan = false;
     }
 
     setupCamera(camera) {

@@ -105,6 +105,7 @@ ion-icon[size=large] {
     100% { transform: translateY(50%); }
 }
 
+
 .nav-placeholder {
     height: 35%;
 }
@@ -189,6 +190,8 @@ ion-icon[size=large] {
 .page-header-container {
     display: inline-flex;
     width: 100%;
+    animation: bounce;
+    animation-duration: 2s;
 }
 
 .page-header-container ion-icon {

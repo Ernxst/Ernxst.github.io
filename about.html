@@ -8,12 +8,19 @@
     <link href="assets/icons/icon.ico" rel="icon">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/mobile.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function () {
+            $("#loading").load("loader.html");
+        });
+    </script>
+    <script src="scripts/js/loader.js"></script>
+
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css" rel="stylesheet"
           type="text/css"/>
 
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js" async></script>
     <script defer>
@@ -24,10 +31,10 @@
     </script>
 </head>
 <body>
-<div id="header"></div>
-<div id="rain"></div>
+<div id="header" style="visibility: hidden;"></div>
+<div id="rain" style="visibility: hidden;"></div>
 
-<div class="content">
+<div id="about" class="content" style="visibility: hidden;">
     <div class="about">
         <div class="animate__animated animate__bounceInDown page-header-container">
             <ion-icon size="large" name="person"></ion-icon>
@@ -65,5 +72,7 @@
     <div class="media">
     </div>
 </div>
+
+<span id="loading"></span>
 </body>
 </html>

@@ -86,8 +86,12 @@ ion-icon[size=large] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transform: translateY(100%);
-    animation: slideUp .8s ease-in-out forwards;
+    top: 100%;
+}
+
+.nav-animated {
+    transition: all .8s ease;
+    top: 0;
 }
 
 @keyframes slideUp {
@@ -99,12 +103,6 @@ ion-icon[size=large] {
     0% { left: 100%; }
     100% { left: 0; }
 }
-
-@keyframes slideDown {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(50%); }
-}
-
 
 .nav-placeholder {
     height: 35%;
@@ -209,9 +207,11 @@ ion-icon[size=large] {
     display: block;
     margin: 0;
     height: 50%;
-    transform: translate(0, 50%);
     padding: 0;
-    animation: slideDown .8s ease forwards;
+}
+
+.content-animated {
+    transform: translate(0, 50%);
     transition: all .8s ease;
 }
 
@@ -241,6 +241,9 @@ div .text-zone {
 
 .media {
     flex-grow: 1;
+}
+
+.media-animated {
     animation: slideUp .8s ease forwards;
     transition: all .8s ease;
 }

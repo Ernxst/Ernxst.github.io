@@ -18,18 +18,6 @@
     font-size: 20px;
 }
 
-.loader-bar {
-    margin: 34px;
-    -webkit-transition: 50ms linear;
-    -moz-transition: 50ms linear;
-    -o-transition: 50ms linear;
-    -ms-transition: 50ms linear;
-    transition: 50ms linear;
-    border-radius: 25px;
-    height: 2px;
-    background: #b100e8;
-}
-
 @keyframes plasma-2 {
     0% {
         transform: scale(1) translate3d(60px, 0, 0);
@@ -72,7 +60,7 @@
     padding: 0;
     margin: 0;
     box-shadow: 0 0 0 20px #9900ff inset;
-    animation: plasma-2-rotate 5s linear infinite;
+    animation: plasma-2-rotate .8s linear infinite;
 }
 .plasma-2 .gooey-container .bubble {
     display: block;
@@ -96,35 +84,35 @@
     transform: translate(-50%, -50%) rotate(60deg);
 }
 .plasma-2 .gooey-container .bubble:nth-child(1):before {
-    animation: plasma-2 2.5s ease 0.5s infinite;
+    animation: plasma-2 0.5s ease 0.5s infinite;
 }
 .plasma-2 .gooey-container .bubble:nth-child(2) {
     transform: translate(-50%, -50%) rotate(120deg);
 }
 .plasma-2 .gooey-container .bubble:nth-child(2):before {
-    animation: plasma-2 5s ease 0.25s infinite;
+    animation: plasma-2 1s ease 0.25s infinite;
 }
 .plasma-2 .gooey-container .bubble:nth-child(3) {
     transform: translate(-50%, -50%) rotate(180deg);
 }
 .plasma-2 .gooey-container .bubble:nth-child(3):before {
-    animation: plasma-2 7.5s ease 0.1666666667s infinite;
+    animation: plasma-2 2s ease 0.1666666667s infinite;
 }
 .plasma-2 .gooey-container .bubble:nth-child(4) {
     transform: translate(-50%, -50%) rotate(240deg);
 }
 .plasma-2 .gooey-container .bubble:nth-child(4):before {
-    animation: plasma-2 10s ease 0.125s infinite;
+    animation: plasma-2 3s ease 0.125s infinite;
 }
 .plasma-2 .gooey-container .bubble:nth-child(5) {
     transform: translate(-50%, -50%) rotate(300deg);
 }
 .plasma-2 .gooey-container .bubble:nth-child(5):before {
-    animation: plasma-2 12.5s ease 0.1s infinite;
+    animation: plasma-2 4s ease 0.1s infinite;
 }
 .plasma-2 .gooey-container .bubble:nth-child(6) {
     transform: translate(-50%, -50%) rotate(360deg);
 }
 .plasma-2 .gooey-container .bubble:nth-child(6):before {
-    animation: plasma-2 15s ease 0.0833333333s infinite;
+    animation: plasma-2 5s ease 0.0833333333s infinite;
 }

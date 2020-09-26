@@ -12,7 +12,9 @@ html {
     height: 100%;
     /*background: var(--dark_gray);*/
     /*background: radial-gradient(ellipse at bottom, #333333 0%, #181818 100%);*/
-    background: url("../assets/images/background.jpg");
+    background-image: url("../assets/images/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
     background-size:cover;
     overflow: hidden;
 }

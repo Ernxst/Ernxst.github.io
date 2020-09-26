@@ -25,5 +25,5 @@ onReady(
         let text = document.getElementById("loader-text")
         if (text !== null)
             text.innerHTML = "Ready";
-        setTimeout(setVisible, 1000);
+        setTimeout(setVisible, 500);
     });

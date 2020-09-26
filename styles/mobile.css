@@ -1,40 +1,3 @@
-@media only screen and (hover: none) and (pointer: coarse) {
-    * { /* Disable animations */
-        -webkit-animation: none !important;
-        -moz-animation: none !important;
-        -o-animation: none !important;
-        -ms-animation: none !important;
-        animation:  none !important;
-    }
-
-    .snow {
-        visibility: hidden;
-        filter: none;
-        animation: none;
-    }
-
-    .navbar {
-        animation: none;
-        transform: none;
-    }
-
-    .nav-buttons {
-        width: 65%;
-    }
-
-    .nav-item a ion-icon {
-        zoom: 0.5;
-    }
-
-    .links {
-        width: 35%;
-    }
-
-    .link-item a ion-icon {
-        zoom: 0.7;
-    }
-}
-
 @media (max-width: 1000px) {
     body {
         display: block;
@@ -42,8 +5,8 @@
     }
 
     .content {
-        margin: 76px 12px 0 0;
-        scroll-margin-top: 76px;
+        margin: 68px 12px 0 0;
+        scroll-margin-top: 68px;
         scroll-margin-left: 0;
         width: 100%;
         display: flex;
@@ -88,18 +51,18 @@
     }
 
     .nav-item a ion-icon, .active-item a ion-icon {
-        padding-top: 30px;
+        height: 100%;
     }
 
     .nav-item a span, .active-item a span {
-        vertical-align: middle;
-        padding-top: 5px;
+        height: 100%;
+        transform: translateY(-25%);
     }
 
     .links {
         width: auto;
         height: 100%;
-        padding-right: 8px;
+        padding-right: 16px;
     }
 
     .link-item {
@@ -206,5 +169,37 @@
         width: 100%;
         -webkit-transform: none;
         transform: none;
+    }
+}
+
+@media only screen and (hover: none) and (pointer: coarse) {
+    * { /* Disable animations */
+        /*-webkit-animation: none !important;*/
+        /*-moz-animation: none !important;*/
+        /*-o-animation: none !important;*/
+        /*-ms-animation: none !important;*/
+        /*animation:  none !important;*/
+    }
+
+    .snow {
+        visibility: hidden;
+        filter: none;
+        animation: none;
+    }
+
+    .navbar {
+        animation: none;
+        transform: none;
+    }
+
+    .nav-buttons {
+    }
+
+    .nav-item a ion-icon {
+        zoom: 0.5;
+    }
+
+    .link-item a ion-icon {
+        zoom: 0.7;
     }
 }

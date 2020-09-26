@@ -1,5 +1,5 @@
 function ready () {
-    let url = document.location.href;
+    let url = document.location.toString();
 
     let btns = document.querySelectorAll('.nav-item');
     let activated = false;
@@ -18,5 +18,4 @@ function ready () {
     }
 }
 
-window.onload = ready;
-// window.addEventListener('load', ready, false)
+ready();

@@ -1,0 +1,2 @@
+import{P as n,a as s}from"./page-title.7a66ea27.js";import{_ as r}from"./index.333b6fd3.js";import{d as m,a as e,c,e as t,w as p,o as l}from"./vendor.3729662d.js";const i=m({name:"Home",components:{PageTitle:n,Page:s}});function d(_,f,u,g,h,x){const o=e("page-title"),a=e("page");return l(),c("div",null,[t(a,null,{default:p(()=>[t(o,{subtitle:`Welcome to my world. Check out the rest
+                        of my site to learn more about me.`,title:"Ernest nkansah-badu"})]),_:1})])}var C=r(i,[["render",d]]);export{C as default};
